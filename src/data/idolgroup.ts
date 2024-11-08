@@ -1,0 +1,147 @@
+import { IdolGroup } from "../types/idol";
+
+export const idols: IdolGroup[] = [
+  {
+    name: "THEBOYZ",
+    logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png  ",
+    slogan: "Best We THE BOYZ! 안녕하세요, 더보이즈입니다!",
+    mainPhoto: "",
+    members: [
+      {
+        name: "상연",
+        birth: "1996. 11. 04. (28세)",
+        role: "반장,메인보컬",
+        img: "",
+      },
+      {
+        name: "제이콥",
+        birth: "1997. 05. 30. (27세)",
+        role: "부반장,리드보컬",
+        img: "",
+      },
+      {
+        name: "영훈",
+        birth: "1997. 08. 08. (27세)",
+        role: "서브보컬",
+        img: "",
+      },
+      {
+        name: "현재",
+        birth: "1997. 09. 13. (27세)",
+        role: "리드보컬",
+        img: "",
+      },
+      {
+        name: "주연",
+        birth: "1998. 01. 11. (26세)",
+        role: "메인댄서,서브보컬",
+        img: "",
+      },
+      {
+        name: "케빈",
+        birth: "1998. 02. 23. (27세)",
+        role: "메인보컬",
+        img: "",
+      },
+      {
+        name: "뉴",
+        birth: "1998. 04. 26. (26세)",
+        role: "메인보컬",
+        img: "",
+      },
+      {
+        name: "큐",
+        birth: "1998. 11. 05. (27세)",
+        role: "메인댄서,서브보컬",
+        img: "",
+      },
+      {
+        name: "주학년",
+        birth: "1999. 03. 09. (25세)",
+        role: "리드댄서,서브보컬",
+        img: "",
+      },
+      {
+        name: "선우",
+        birth: "2000. 04. 12. (24세)",
+        role: "메인래퍼,서브보컬",
+        img: "",
+      },
+      {
+        name: "에릭",
+        birth: "2000. 12. 22. (23세)",
+        role: "리드래퍼,리드댄서",
+        img: "",
+      },
+    ],
+    albums: [],
+    bgColor: "000000",
+    pointColor: "D0161D",
+    textColor: "FFFFFF",
+  },
+  {
+    name: "ZEROBASEONE",
+    logo: "",
+    mainPhoto: "",
+    slogan: "둘, 셋 D1, Be the ONE! 안녕하세요, ZEROBASEONE입니다!",
+    members: [
+      {
+        name: "성한빈",
+        img: "",
+        birth: "2001.06 . 13. (23세)",
+        role: "리더, 보컬, 댄스",
+      },
+      {
+        name: "김지웅",
+        img: "",
+        birth: "1998. 12. 14. (25세)",
+        role: "보컬, 래퍼",
+      },
+      {
+        name: "장하오",
+        img: "",
+        birth: "2000. 07. 25. (24세)",
+        role: "센터, 보컬, 댄서",
+      },
+      {
+        name: "석매튜",
+        img: "",
+        birth: "2002. 05. 28. (22세)",
+        role: "보컬, 래퍼",
+      },
+      {
+        name: "김태래",
+        img: "",
+        birth: "2002. 07. 14. (22세)",
+        role: "메인보컬",
+      },
+      {
+        name: "리키",
+        img: "",
+        birth: "2004. 05. 20. (20세)",
+        role: "보컬",
+      },
+      {
+        name: "김규빈",
+        img: "",
+        birth: "2004. 08. 30. (20세)",
+        role: "보컬,래퍼",
+      },
+      {
+        name: "박건욱",
+        img: "",
+        birth: "2005. 01. 10. (19세)",
+        role: "보컬,래퍼",
+      },
+      {
+        name: "한유진",
+        img: "",
+        birth: "2007. 03. 20. (17세)",
+        role: "보컬, 래퍼",
+      },
+    ],
+    bgColor: "bg-gradient-to-r from-304FBB to-BAC4E8",
+    pointColor: "1F1CB2",
+    textColor: "FFFFFF",
+  },
+];
