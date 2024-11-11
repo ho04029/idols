@@ -12,16 +12,23 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
     slogan,
     members,
     bgColor,
-    pointColor,
     textColor,
+    memberConColor,
+    memberConTextColor,
+    headerActiveColor,
+    headerActiveTextColor,
   } = group;
   return (
     <div className="flex justify-center">
       <div
-        className="font-['Loboto'] max-w-[375px]"
+        className="font-['Loboto'] max-w-[430px]"
         style={{ backgroundColor: bgColor, color: textColor }}
       >
-        <Header />
+        <Header
+          textColor={textColor}
+          headerActiveColor={headerActiveColor}
+          headerActiveTextColor={headerActiveTextColor}
+        />
 
         <div className="flex flex-col items-center">
           <section className="flex flex-col items-center mb-[54px]">
@@ -32,7 +39,7 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
             />
             <img
               src={mainPhoto}
-              alt={`${name} mainphoto`}
+              alt={`${name} mainPhoto`}
               className="w-[349px] h-[231px] mb-2"
             />
             <p className="text-[10px] font-semibold">{slogan}</p>
@@ -44,7 +51,8 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
                 <IdolgroupMember
                   key={idx}
                   member={member}
-                  pointColor={pointColor}
+                  memberConColor={memberConColor}
+                  memberConTextColor={memberConTextColor}
                 />
               ))}
             </ul>

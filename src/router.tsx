@@ -24,7 +24,7 @@ const routerData = [
   {
     id: 4,
     path: "/idolgroup/NCTWISH",
-    element: <Idolgroup group={IdolGroups[0]} />,
+    element: <Idolgroup group={IdolGroups[3]} />,
   },
 ];
 
