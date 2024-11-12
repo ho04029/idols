@@ -439,8 +439,80 @@ export const IdolGroups: IidolGroup[] = [
         role: "보컬",
       },
     ],
-    albums: {},
-    japanAlbums: {},
+    albums: {
+      미니: [
+        {
+          date: "2024. 06. 17",
+          series: "The 1st Mini Album",
+          title: "[RIIZING]",
+          img: "",
+        },
+        {
+          date: "2024. 09. 04 (Digital), 2024. 09. 19 (CD)",
+          series: "Epilogue EP",
+          title: "[RIIZING : Epilogue]",
+          img: "",
+        },
+      ],
+      싱글: [
+        {
+          date: "2023. 09. 04",
+          series: "The 1st Single Album",
+          title: "[Get A Guitar]",
+          img: "",
+        },
+      ],
+      "디지털 싱글": [
+        {
+          date: "2023. 08. 21",
+          series: "Prologue Single",
+          title: "[Memories]",
+          img: "",
+        },
+        {
+          date: "2023. 10. 27",
+          series: "Digital Single",
+          title: "[Talk Saxy]",
+          img: "",
+        },
+        {
+          date: "2024. 01. 05",
+          series: "Digital Single",
+          title: "[Love 119]",
+          img: "",
+        },
+        {
+          date: "2024. 04. 03",
+          series: "Digital Single",
+          title: "[Siren]",
+          img: "",
+        },
+        {
+          date: "2024. 04. 18",
+          series: "Prologue Single",
+          title: "[Impossible]",
+          img: "",
+        },
+      ],
+    },
+    japanAlbums: {
+      싱글: [
+        {
+          date: "2024. 07. 29 (Digital), 2024. 09. 05 (CD)",
+          series: "The 1st Japan Single",
+          title: "[Lucky]",
+          img: "",
+        },
+      ],
+      "디지털 싱글": [
+        {
+          date: "2024. 01. 24",
+          series: "Digital Single",
+          title: "[Love 119 (Japanese version)]",
+          img: "",
+        },
+      ],
+    },
     bgColor: "#F0A240",
     textColor: "#000000",
     headerActiveColor: "#000000",
