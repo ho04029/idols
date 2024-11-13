@@ -565,7 +565,52 @@ export const IdolGroups: IidolGroup[] = [
         role: "래퍼",
       },
     ],
-    albums: {},
+    albums: {
+      정규: [
+        {
+          date: "2024. 11. 27",
+          series: "Japan 1st Album",
+          title: "[WISHFUL]",
+          img: "",
+        },
+      ],
+      미니: [
+        {
+          date: "2024. 09. 24",
+          series: "The 1st Mini Album",
+          title: "[Steady]",
+          img: "",
+        },
+      ],
+      싱글: [
+        {
+          date: "2024. 02. 28",
+          series: "The 1st Single",
+          title: "[WISH]",
+          img: "",
+        },
+        {
+          date: "2024. 07. 01",
+          series: "The 2nd Single",
+          title: "[Songbird]",
+          img: "",
+        },
+      ],
+      "디지털 싱글": [
+        {
+          date: "2023. 10. 08",
+          series: "Pre-Debut Single",
+          title: "[Hands Up]",
+          img: "",
+        },
+        {
+          date: "2024. 09. 09",
+          series: "Pre-Release Single",
+          title: "[Dunk Shot]",
+          img: "",
+        },
+      ],
+    },
     bgColor: "#FEACE5",
     textColor: "#000000",
     headerActiveColor: "#000000",
