@@ -79,7 +79,13 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
                 >
                   <p>{category}</p>
                 </div>
-                <ul className="w-full grid grid-cols-2 gap-x-[24px] gap-y-[58px]">
+                <ul
+                  className={`w-full ${
+                    albums[category]?.length === 1
+                      ? "grid grid-cols-1 justify-center"
+                      : "grid grid-cols-2 gap-x-[24px] gap-y-[58px]"
+                  }`}
+                >
                   {albums[category]?.map((album, idx) => (
                     <IdolgroupAlbum key={idx} album={album} />
                   ))}
@@ -106,7 +112,13 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
                   >
                     <p>{category}</p>
                   </div>
-                  <ul className="w-full grid grid-cols-2 gap-x-[24px] gap-y-[58px]">
+                  <ul
+                    className={`w-full ${
+                      japanAlbums[category]?.length === 1
+                        ? "grid grid-cols-1 justify-center"
+                        : "grid grid-cols-2 gap-x-[24px] gap-y-[58px]"
+                    }`}
+                  >
                     {japanAlbums[category]?.map((album, idx) => (
                       <IdolgroupAlbum key={idx} album={album} />
                     ))}

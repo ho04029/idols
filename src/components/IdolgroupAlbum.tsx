@@ -5,7 +5,7 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
 
   return (
     <li className="flex flex-col items-center">
-      <img src={img} alt={title} className="mb-[10px]" />
+      <img src={img} alt={title} className="w-[148px] h-[148px] mb-[10px]" />
       {date.split(",").map((d, idx) => (
         <p key={idx} className="text-[14px] font-medium">
           {d.trim()}
