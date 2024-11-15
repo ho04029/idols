@@ -1,8 +1,7 @@
-import React from "react";
-
 import { IidolGroup } from "../types/idol";
 import Header from "../components/Header";
 import IdolgroupMember from "../components/IdolgroupMember";
+import IdolgroupAlbum from "../components/IdolgroupAlbum";
 
 const Idolgroup = ({ group }: { group: IidolGroup }) => {
   const {
@@ -11,13 +10,20 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
     mainPhoto,
     slogan,
     members,
+    albums,
+    japanAlbums,
     bgColor,
     textColor,
     memberConColor,
     memberConTextColor,
     headerActiveColor,
     headerActiveTextColor,
+    albumconbgColor,
+    albumcontextColor,
   } = group;
+
+  console.log(japanAlbums);
+
   return (
     <div className="flex justify-center">
       <div
@@ -44,8 +50,8 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
             />
             <p className="text-[10px] font-semibold">{slogan}</p>
           </section>
-          <section className="w-full flex flex-col items-center">
-            <h3 className="text-4xl font-extrabold mb-[24px]">Members</h3>
+          <section className="w-full flex flex-col items-center mb-[60px]">
+            <h3 className="text-4xl font-extrabold mb-[24px]">MEMBERS</h3>
             <ul className="w-full grid grid-cols-2">
               {members.map((member, idx) => (
                 <IdolgroupMember
@@ -57,7 +63,58 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
               ))}
             </ul>
           </section>
-          <section></section>
+          <section className="w-full flex flex-col items-center mb-[60px] px-[27px]">
+            <h3 className="text-4xl font-extrabold mb-[40px]">ALBUMS</h3>
+            {Object.keys(albums).map((category, idx) => (
+              <section
+                key={idx}
+                className="w-full flex flex-col items-center mb-[40px]"
+              >
+                <div
+                  className="max-w-fit text-[16px] font-semibold mb-[40px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] rounded-[5px]"
+                  style={{
+                    backgroundColor: albumconbgColor,
+                    color: albumcontextColor,
+                  }}
+                >
+                  <p>{category}</p>
+                </div>
+                <ul className="w-full grid grid-cols-2 gap-x-[24px] gap-y-[58px]">
+                  {albums[category]?.map((album, idx) => (
+                    <IdolgroupAlbum key={idx} album={album} />
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </section>
+          {japanAlbums && (
+            <section className="w-full flex flex-col items-center mb-[60px] px-[27px]">
+              <h3 className="text-4xl font-extrabold mb-[40px]">
+                JAPAN ALBUMS
+              </h3>
+              {Object.keys(japanAlbums).map((category, idx) => (
+                <section
+                  key={idx}
+                  className="w-full flex flex-col items-center mb-[40px]"
+                >
+                  <div
+                    className="max-w-fit text-[16px] font-semibold mb-[40px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] rounded-[5px]"
+                    style={{
+                      backgroundColor: albumconbgColor,
+                      color: albumcontextColor,
+                    }}
+                  >
+                    <p>{category}</p>
+                  </div>
+                  <ul className="w-full grid grid-cols-2 gap-x-[24px] gap-y-[58px]">
+                    {japanAlbums[category]?.map((album, idx) => (
+                      <IdolgroupAlbum key={idx} album={album} />
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </section>
+          )}
         </div>
       </div>
     </div>

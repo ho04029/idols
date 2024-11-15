@@ -11,7 +11,7 @@ const Header = ({
 }) => {
   return (
     <header className="flex mt-[37px] mb-[38px] mx-[30px] text-[12px] font-bold">
-      <nav>
+      <nav className="w-full flex justify-between">
         <NavLink
           to={"/idolgroup/THEBOYZ"}
           className="mr-[28px]"

@@ -13,13 +13,16 @@ export interface IAlbum {
   img: string;
 }
 
-export interface IAlbums {
-  정규?: IAlbum[];
-  미니?: IAlbum[];
-  싱글?: IAlbum[];
-  "디지털 싱글"?: IAlbum[];
-  "선공개 싱글"?: IAlbum[];
+export interface IAlbumsStrict {
+  [key: string]: IAlbum[];
+  정규: IAlbum[];
+  미니: IAlbum[];
+  싱글: IAlbum[];
+  "디지털 싱글": IAlbum[];
+  "선공개 싱글": IAlbum[];
 }
+
+export type IAlbums = Partial<IAlbumsStrict>;
 
 export interface IidolGroup {
   name: string;
