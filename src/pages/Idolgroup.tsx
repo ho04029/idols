@@ -22,12 +22,10 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
     albumcontextColor,
   } = group;
 
-  console.log(japanAlbums);
-
   return (
     <div className="flex justify-center">
       <div
-        className="font-['Loboto'] max-w-[430px]"
+        className="font-['Loboto'] w-[430px]"
         style={{ backgroundColor: bgColor, color: textColor }}
       >
         <Header
