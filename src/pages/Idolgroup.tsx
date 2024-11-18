@@ -34,6 +34,7 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
           {members.map((member, idx) => (
             <IdolgroupMember
               key={idx}
+              groupName={name}
               member={member}
               memberConColor={memberConColor}
               memberConTextColor={memberConTextColor}

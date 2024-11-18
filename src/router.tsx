@@ -4,11 +4,12 @@ import { IdolGroups } from "./data/idolgroup";
 import Home from "./pages/Home";
 import Idolgroup from "./pages/Idolgroup";
 import Layout from "./components/Layout";
+import IdolMemberSpecific from "./pages/IdolMemberSpecific";
 
 const routerData = [
   { path: "/", element: <Home /> },
   {
-    path: "/idolgroup",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -26,6 +27,27 @@ const routerData = [
       {
         path: "/idolgroup/NCTWISH",
         element: <Idolgroup group={IdolGroups[3]} />,
+      },
+    ],
+  },
+  {
+    path: "/idolgroup",
+    children: [
+      {
+        path: "THEBOYZ/:memberName",
+        element: <IdolMemberSpecific />,
+      },
+      {
+        path: "ZEROBASEONE/:memberName",
+        element: <IdolMemberSpecific />,
+      },
+      {
+        path: "RIIZE/:memberName",
+        element: <IdolMemberSpecific />,
+      },
+      {
+        path: "NCTWISH/:memberName",
+        element: <IdolMemberSpecific />,
       },
     ],
   },

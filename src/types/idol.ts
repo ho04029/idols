@@ -41,3 +41,39 @@ export interface IidolGroup {
   albumconbgColor: string;
   albumcontextColor: string;
 }
+
+export interface IMemberSpecific {
+  name: string;
+  englishName: string;
+  imgs: string[];
+  birth: string;
+  nationality: string;
+  physical: string;
+  familys: string[];
+  academics: string[];
+  religion?: string;
+  agency: string;
+  groupName: string;
+  position: string;
+  debut: string;
+  serialNumber?: string;
+  mbti: string;
+}
+
+export interface IMemberSpecifics {
+  [memberName: string]: IMemberSpecific;
+}
+
+export interface IMemberSpecificPageInfo {
+  bgColor: string;
+  txtColor: string;
+  logo: string;
+}
+
+export interface IMemberSpecificGroup extends IMemberSpecificPageInfo {
+  members: IMemberSpecifics;
+}
+
+export interface IMemberSpecificGroups {
+  [groupName: string]: IMemberSpecificGroup;
+}

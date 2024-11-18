@@ -370,16 +370,16 @@ export const IdolGroups: IidolGroup[] = [
       "디지털 싱글": [
         {
           date: "2024. 05. 17",
-          series: "JAPAN DIGITAL SINGLE",
+          series: "Japan Digital Single",
           title: "Feel the POP",
-          etc: "Japanese version",
+          etc: "(Japanese version)",
           img: "https://i.ibb.co/Lxs9jb9/zb1-feel-the-pop.png",
         },
         {
           date: "2024. 08. 30",
           series: "Japan Digital Single",
           title: "GOOD SO BAD",
-          etc: "Japanese version",
+          etc: "(Japanese version)",
           img: "https://i.ibb.co/LZDv1YD/zb1-cinema-paradise.png",
         },
         {
@@ -512,7 +512,7 @@ export const IdolGroups: IidolGroup[] = [
           date: "2024. 01. 24",
           series: "Digital Single",
           title: "Love 119",
-          etc: "Japanese version",
+          etc: "(Japanese version)",
           img: "https://i.ibb.co/FVsTpCq/riize-love119.png",
         },
       ],
