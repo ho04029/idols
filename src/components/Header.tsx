@@ -10,11 +10,10 @@ const Header = ({
   headerActiveTextColor: string;
 }) => {
   return (
-    <header className="flex mt-[37px] mb-[38px] mx-[30px] text-[12px] font-bold">
-      <nav className="w-full flex justify-between">
+    <header className="flex mt-[37px] mb-[38px] mx-[30px] text-[16px] font-bold">
+      <nav className="w-full flex justify-between gap-[16px]">
         <NavLink
           to={"/idolgroup/THEBOYZ"}
-          className="mr-[28px]"
           style={({ isActive }) => ({
             color: isActive ? headerActiveTextColor : textColor,
             backgroundColor: isActive ? headerActiveColor : "transparent",
@@ -26,7 +25,6 @@ const Header = ({
         </NavLink>
         <NavLink
           to={"/idolgroup/ZEROBASEONE"}
-          className="mr-[28px]"
           style={({ isActive }) => ({
             color: isActive ? headerActiveTextColor : textColor,
             backgroundColor: isActive ? headerActiveColor : "transparent",
@@ -38,7 +36,6 @@ const Header = ({
         </NavLink>
         <NavLink
           to={"/idolgroup/RIIZE"}
-          className="mr-[28px]"
           style={({ isActive }) => ({
             color: isActive ? headerActiveTextColor : textColor,
             backgroundColor: isActive ? headerActiveColor : "transparent",

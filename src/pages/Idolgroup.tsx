@@ -24,9 +24,9 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
         <img
           src={mainPhoto}
           alt={`${name} mainPhoto`}
-          className="w-[349px] h-[231px] mb-2"
+          className="w-[359px] h-[237px] mb-2"
         />
-        <p className="text-[10px] font-semibold">{slogan}</p>
+        <p className="text-[14px] font-bold">{slogan}</p>
       </section>
       <section className="w-full flex flex-col items-center mb-[60px]">
         <h3 className="text-4xl font-extrabold mb-[24px]">MEMBERS</h3>
