@@ -43,14 +43,14 @@ export interface IidolGroup {
 }
 
 export interface IMemberSpecific {
-  name: string;
+  name: string | string[];
   englishName: string;
   imgs: string[];
-  birth: string;
+  birth: string[];
   nationality: string;
   physical: string;
   familys: string[];
-  academics: string[];
+  academics?: string[];
   religion?: string;
   agency: string;
   groupName: string;
@@ -58,6 +58,7 @@ export interface IMemberSpecific {
   debut: string;
   serialNumber?: string;
   mbti: string;
+  symbolNumber?: string;
 }
 
 export interface IMemberSpecifics {

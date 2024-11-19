@@ -3,7 +3,7 @@ import { IidolGroup } from "../types/idol";
 export const IdolGroups: IidolGroup[] = [
   {
     name: "THEBOYZ",
-    logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png  ",
+    logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png",
     slogan: "Best We THE BOYZ! 안녕하세요, 더보이즈입니다!",
     mainPhoto: "https://i.ibb.co/6vfqs9w/theboyz-main.png",
     members: [
