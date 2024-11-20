@@ -6,9 +6,9 @@ export const memberSpecifics: IMemberSpecificGroups = {
         name: "이상연 (李上淵, Lee Sangyeon)",
         englishName: "Sangyeon",
         imgs: [
-          "https://i.ibb.co/XzGTxbh/theboyz-sy-slide1.png",
-          "https://i.ibb.co/NtQCs9J/theboyz-sy-slide2.png",
-          "https://i.ibb.co/CnKNF40/theboyz-sy-slide3.png",
+          "https://i.ibb.co/8zsptDy/theboyz-sy-slide1.png",
+          "https://i.ibb.co/MnHFqCn/theboyz-sy-slide2.png",
+          "https://i.ibb.co/VtHW4k4/theboyz-sy-slide3.png",
         ],
         birth: ["1996년 11월 04일", "서울특별시 송파구 가락동"],
         nationality: "대한민국",

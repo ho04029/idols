@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 
 import { memberSpecifics } from "../data/memberSpecific";
+import Slider from "../components/Slider";
 
 export const SpecificList = ({
   title,
@@ -55,7 +56,7 @@ const IdolMemberSpecific = () => {
   return (
     <div className="flex justify-center">
       <div
-        className="font-['Loboto'] w-[430px]"
+        className="font-['Loboto'] w-[430px] max-w-full overflow-hidden"
         style={{ backgroundColor: bgColor, color: txtColor }}
       >
         <header>
@@ -66,52 +67,34 @@ const IdolMemberSpecific = () => {
           </div>
         </header>
         <section>
-          <div className="slide_wrap">
-            <div className="container">
-              <div className="swiper mySwiper">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">Slide 1</div>
-                  <div className="swiper-slide">Slide 2</div>
-                  <div className="swiper-slide">Slide 3</div>
-                  <div className="swiper-slide">Slide 4</div>
-                  <div className="swiper-slide">Slide 5</div>
-                  <div className="swiper-slide">Slide 6</div>
-                  <div className="swiper-slide">Slide 7</div>
-                  <div className="swiper-slide">Slide 8</div>
-                  <div className="swiper-slide">Slide 9</div>
-                </div>
-              </div>
-            </div>
+          <div className="mt-[34px] mb-[10px]">
+            <Slider slides={imgs} />
           </div>
-          <div>
-            <div>
-              <div className="flex items-center justify-center text-center flex-col text-xl font-bold mb-5">
-                {memberName}
-                <span className="text-[16px]">{englishName}</span>
-              </div>
-              <div className="mx-[21px]">
-                <ul className="text-sm font-medium">
-                  <SpecificList title="본명" des={name} />
-                  <SpecificList title="출생" des={birth} />
-                  <SpecificList title="국적" des={nationality} />
-                  <SpecificList title="신체" des={physical} />
-                  <SpecificList title="가족" des={familys} />
-                  {academics && <SpecificList title="학력" des={academics} />}
-                  {religion && <SpecificList title="종교" des={religion} />}
-                  <SpecificList title="소속사" des={agency} />
-                  <SpecificList title="소속 그룹" des={groupName} />
-                  <SpecificList title="포지션" des={position} />
-                  <SpecificList title="데뷔" des={debut} />
-                  {serialNumber && (
-                    <SpecificList title="고유번호" des={serialNumber} />
-                  )}
-                  <SpecificList title="MBTI" des={mbti} />
-                  {symbolNumber && (
-                    <SpecificList title="상징번호" des={symbolNumber} />
-                  )}
-                </ul>
-              </div>
-            </div>
+          <div className="flex items-center justify-center text-center flex-col text-xl font-bold mb-[31.35px]">
+            {memberName}
+            <span className="text-[16px]">{englishName}</span>
+          </div>
+          <div className="mx-[21px]">
+            <ul className="text-sm font-medium">
+              <SpecificList title="본명" des={name} />
+              <SpecificList title="출생" des={birth} />
+              <SpecificList title="국적" des={nationality} />
+              <SpecificList title="신체" des={physical} />
+              <SpecificList title="가족" des={familys} />
+              {academics && <SpecificList title="학력" des={academics} />}
+              {religion && <SpecificList title="종교" des={religion} />}
+              <SpecificList title="소속사" des={agency} />
+              <SpecificList title="소속 그룹" des={groupName} />
+              <SpecificList title="포지션" des={position} />
+              <SpecificList title="데뷔" des={debut} />
+              {serialNumber && (
+                <SpecificList title="고유번호" des={serialNumber} />
+              )}
+              <SpecificList title="MBTI" des={mbti} />
+              {symbolNumber && (
+                <SpecificList title="상징번호" des={symbolNumber} />
+              )}
+            </ul>
           </div>
         </section>
       </div>
