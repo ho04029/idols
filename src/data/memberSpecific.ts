@@ -32,7 +32,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       제이콥: {
         name: ["Jacob Bae (제이콥 배)", "배준영 (裵俊英, Bae Junyung)"],
         englishName: "Jacob Bae",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/ypxPQM3/theboyz-jacob-slide2.png",
+          "https://i.ibb.co/qRwn6yg/theboyz-jacob-slide3.png",
+          "https://i.ibb.co/C9gQt1h/theboyz-jacob-slide1.png",
+        ],
         birth: ["1997년 5월 30일 (27세)", "캐나다 온타리오 토론토"],
         nationality: "캐나다",
         physical: "179cm | 60kg | 270mm | B형",
@@ -49,7 +53,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       영훈: {
         name: "김영훈 (金泳勳, Kim Younghoon)",
         englishName: "Younghoon",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/0JzWsB6/theboyz-yh-slide1.png",
+          "https://i.ibb.co/DpGhmVF/theboyz-yh-slide2.png",
+          "https://i.ibb.co/PCwgzcq/theboyz-yh-slide3.png",
+        ],
         birth: ["1997년 8월 8일 (27세)", "서울특별시 양천구 목동"],
         nationality: "대한민국",
         physical: "185cm | 61~63kg | 265~270mm | A형",
@@ -70,7 +78,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       현재: {
         name: "이재현 (李在賢, Lee Jaehyun)",
         englishName: "HYUNJAE",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/CV925MM/theboyz-hj-slide3.png",
+          "https://i.ibb.co/sQKdPWZ/theboyz-hj-slide2.png",
+          "https://i.ibb.co/MGM12PN/theboyz-hj-slide1.png",
+        ],
         birth: ["1997년 9월 13일 (27세)", "인천광역시 연수구 동춘동"],
         nationality: "대한민국",
         physical: "180cm | 66kg | 265~270mm | B형",
@@ -95,7 +107,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       주연: {
         name: "이주연 (李柱延, Lee Juyeon)",
         englishName: "Juyeon",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/8rLQ671/theboyz-jy-slide1.png",
+          "https://i.ibb.co/TWR9LBM/theboyz-jy-slide2.png",
+          "https://i.ibb.co/fdGDp2w/theboyz-jy-slide3.png",
+        ],
         birth: ["1998년 1월 15일 [입학유예] (26세)", "경기도 광주군 초월면"],
         nationality: "대한민국",
         physical: "180.4cm | 66kg | 270mm | AB형",
@@ -120,7 +136,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       케빈: {
         name: "Kevin Moon (케빈 문), 문형서 (文炯書[훈음], Moon Hyungseo)",
         englishName: "Kevin",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/mq2QLYt/theboyz-kevin-slide1.png",
+          "https://i.ibb.co/MVnjYq6/theboyz-kevin-slide2.png",
+          "https://i.ibb.co/HT2vCCh/theboyz-kevin-slide3.png",
+        ],
         birth: ["1998년 2월 23일 [빠른생일]", "광주광역시"],
         nationality: "캐나다",
         physical: "178cm | 60kg | 265mm | AB형",
@@ -141,7 +161,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       뉴: {
         name: "최찬희 (崔燦喜, Choi Chanhee)",
         englishName: "NEW",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/9yGb0G8/theboyz-new-slide1.png",
+          "https://i.ibb.co/pnFr6Tv/theboyz-new-slide2.png",
+          "https://i.ibb.co/Trsp3SZ/theboyz-new-slide3.png",
+        ],
         birth: ["1998년 4월 26일 (26세)", "전라북도 전주시 덕진구 송천동"],
         nationality: "대한민국",
         physical: "178cm | 250mm | B형",
@@ -163,7 +187,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       큐: {
         name: "지창민 (池昌珉, Ji Changmin)",
         englishName: "Q",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/PhcQNNx/theboyz-q-slide1.png",
+          "https://i.ibb.co/zFg6R4V/theboyz-q-slide2.png",
+          "https://i.ibb.co/1JyWrMP/theboyz-q-slide3.png",
+        ],
         birth: ["1998년 11월 5일 (26세)", "충청북도 청주시 흥덕구 개신동"],
         nationality: "대한민국",
         physical: "176cm | 55kg | 260~265mm | AB형",
@@ -184,7 +212,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       주학년: {
         name: "주학년 (周鶴年, Ju Haknyeon), 周鶴年 (Zau¹ Hok⁶ Nin⁴, 자우혹닌)",
         englishName: "Ju Haknyeon",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/tm8TtBS/theboyz-jhn-slide1.png",
+          "https://i.ibb.co/YW9KyBJ/theboyz-jhn-slide2.png",
+          "https://i.ibb.co/sbJQJpJ/theboyz-jhn-slide3.png",
+        ],
         birth: ["1999년 3월 9일 (25세)", "제주도 남제주군 대정읍 동일리"],
         nationality: "대한민국",
         physical: "177cm | 58kg | 265mm | B형",
@@ -211,7 +243,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       선우: {
         name: "김선우 (金善旴, Kim Sunwoo)",
         englishName: "Sunwoo",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/DkMZFrQ/theboyz-sw-slide1.png",
+          "https://i.ibb.co/QjmXdhk/theboyz-sw-slide2.png",
+          "https://i.ibb.co/J3jjr35/theboyz-sw-slide3.png",
+        ],
         birth: ["2000년 4월 12일 (24세)", "서울특별시 강남구 도곡동"],
         nationality: "대한민국",
         physical: "178cm | 61~62kg | 265~270mm | B형",
@@ -236,7 +272,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       에릭: {
         name: "손영재 (孫英宰, Sohn Youngjae)",
         englishName: "Eric",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/jDvrRYZ/theboyz-eric-slide1.png",
+          "https://i.ibb.co/8N8pdQd/theboyz-eric-slide2.png",
+          "https://i.ibb.co/0YP0C2h/theboyz-erick-slide3.png",
+        ],
         birth: ["2000년 12월 22일 (23세)", "서울특별시 양천구 목동"],
         nationality: "대한민국",
         physical: "175cm | 60kg | 270mm | A형",
@@ -265,7 +305,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       성한빈: {
         name: "성한빈 (成韓彬, Sung Hanbin)",
         englishName: "Sung Hanbin",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/Tr6cTkw/zb1-shb-slide1.png",
+          "https://i.ibb.co/zSPcskm/zb1-shb-slide3.png",
+          "https://i.ibb.co/ZWj29St/zb1-shb-slide2.png",
+        ],
         birth: ["2001년 6월 13일 (23세)", "충청남도 천안시 쌍용동"],
         nationality: "대한민국",
         physical: "179.6cm | 67kg | O형 | 270mm",
@@ -291,7 +335,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       김지웅: {
         name: "김지웅 (金地雄, Kim Jiwoong)",
         englishName: "Jiwoong",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/Hp9dGS3/zb1-kjw-slide1.png",
+          "https://i.ibb.co/cbXmPWQ/zb1-kjw-slide2.png",
+          "https://i.ibb.co/JHDfTCx/zb1-kjw-slide3.png",
+        ],
         birth: ["1998년 12월 14일 (25세)", "경상북도 포항시"],
         nationality: "대한민국",
         physical: "181cm | AB형 | 270mm",
@@ -307,7 +355,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       장하오: {
         name: "장하오 (章昊, Zhāng Hào)",
         englishName: "Zhang Hao",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/kG6tPbP/zb1-zhao-slide1.png",
+          "https://i.ibb.co/tCDFXWn/zb1-zhao-slide2.png",
+          "https://i.ibb.co/2dBFBq4/zb1-zhao-slide3.png",
+        ],
         birth: ["2000년 7월 25일 (24세)", "푸젠성 난핑시"],
         nationality: "중국",
         physical: "180.5cm | A형 | 270mm",
@@ -330,7 +382,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
           "석우현 (石友鉉, Seok Woohyun)",
         ],
         englishName: "Matthew",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/g65BG65/zb1-smattew-slide1.png",
+          " https://i.ibb.co/85Cwz59/zb1-smattew-slide2.png",
+          "https://i.ibb.co/7pNxzYJ/zb1-smattew-slide3.png",
+        ],
         birth: ["2002년 5월 28일 (22세)", "브리티시컬럼비아 밴쿠버"],
         nationality: "캐나다",
         physical: "170cm | B형 | 270mm",
@@ -353,7 +409,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       김태래: {
         name: "김태래 (金泰來, Kim Taerae)",
         englishName: "Taerae",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/S3jV0pN/zb1-ktr-slide1.png",
+          "https://i.ibb.co/zJx1TW5/zb1-ktr-slide2.png",
+          "https://i.ibb.co/gj4qS6H/zb1-ktr-slide3.png",
+        ],
         birth: ["2002년 7월 14일 (22세)", "충청남도 천안시 동남구"],
         nationality: "대한민국",
         physical: "174cm | O형 | 280mm",
@@ -375,7 +435,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       리키: {
         name: "션취안루이 (沈泉锐, Shěn Quánruì)",
         englishName: "Ricky",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/ByrYGTw/zb1-ricky-slide1.png",
+          "https://i.ibb.co/GV7h7WT/zb1-ricky-slide2.png",
+          "https://i.ibb.co/44R6fkt/zb1-ricky-slide3.png",
+        ],
         birth: ["2004년 5월 20일 (20세)", "상하이시"],
         nationality: "중국",
         physical: "184.4cm | A형 | 285~290mm",
@@ -394,7 +458,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       김규빈: {
         name: "김규빈 (金奎彬, Kim Gyuvin)",
         englishName: "Gyuvin",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/xLYHNJt/zb1-kgv-slide1.png",
+          "https://i.ibb.co/zxZY3N4/zb1-kgv-slide2.png",
+          "https://i.ibb.co/2N3Dw6B/zb1-kgv-slide3.png",
+        ],
         birth: ["2004년 8월 30일 (20세)", "서울특별시 강남구 압구정동"],
         nationality: "대한민국",
         physical: "188cm | 63kg | B형 | 285~290mm",
@@ -419,7 +487,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       박건욱: {
         name: "박건욱 (朴乾旭, Park Gunwook)",
         englishName: "Gunwook",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/85VSPpD/zb1-pgw-slide1.png",
+          "https://i.ibb.co/02yg6Zm/zb1-pgw-slide2.png",
+          "https://i.ibb.co/FVZdz4p/zb1-pgw-slide3.png",
+        ],
         birth: ["2005년 1월 10일[조기입학] (19세)", "경기도 오산시 가수동"],
         nationality: "대한민국",
         physical: "183.9cm | 73kg | 280mm",
@@ -440,7 +512,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       한유진: {
         name: "한유진 (韓維辰, Han Yujin)",
         englishName: "Yujin",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/6FTSz21/zb1-hyj-slide1.png",
+          "https://i.ibb.co/PZ1RG2S/zb1-hyj-slide2.png",
+          "https://i.ibb.co/f9fphc1/zb1-hyj-slide3.png",
+        ],
         birth: ["2007년 3월 20일 (17세)", "대구광역시"],
         nationality: "대한민국",
         physical: "176cm | A형 | 270mm",
@@ -468,7 +544,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       쇼타로: {
         name: "오사키 쇼타로 (大﨑 将太た郎, Osaki Shotaro)",
         englishName: "Shotaro",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/pr6p1nm/riize-sho-slide1.png",
+          "https://i.ibb.co/LtjGdry/riize-sho-slide2.png",
+          "https://i.ibb.co/DLd503r/riize-sho-slide3.png",
+        ],
         birth: ["2000년 11월 25일 (23세)", "가나가와현 요코하마시"],
         nationality: "일본",
         physical: "178cm | 62~63kg | A형 | 280mm",
@@ -488,7 +568,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       은석: {
         name: "송은석 (宋恩奭, Song Eunseok)",
         englishName: "Eunseok",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/rvyk1bN/riize-es-slide1.png",
+          "https://i.ibb.co/kKxBVhc/riize-es-slide2.png",
+          "https://i.ibb.co/R2FtRVs/riize-es-slide3.png",
+        ],
         birth: ["2001년 3월 19일 (23세)", "서울특별시 광진구 구의동"],
         nationality: "대한민국",
         physical: "180cm | 59~60kg | AB형 | 260mm",
@@ -512,7 +596,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       성찬: {
         name: "정성찬 (鄭成燦, Jung Sungchan)",
         englishName: "Sungchan",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/p1ns7SK/riize-sc-slide1.png",
+          "https://i.ibb.co/2cQb5zQ/riize-sc-slide2.png",
+          "https://i.ibb.co/Qvsk70W/riize-sc-slide3.png",
+        ],
         birth: ["2001년 9월 13일 (23세)", "서울특별시 강남구 개포동"],
         nationality: "대한민국",
         physical: "185.6cm | 71~72kg | A형 | 270mm",
@@ -536,7 +624,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       원빈: {
         name: "박원빈 (朴元彬, Park Wonbin)",
         englishName: "Wonbin",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/MsSCWX1/riize-wb-slide1.png",
+          "https://i.ibb.co/5rKTh1k/riize-wb-slide2.png",
+          "https://i.ibb.co/RSLFwr0/riize-wb-slide3.png",
+        ],
         birth: [
           "2002년 3월 2일 (22세)",
           "서울특별시 성북구",
@@ -562,7 +654,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       소희: {
         name: "이소희 (李炤煕, Lee Sohee)",
         englishName: "Sohee",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/hd42PGT/riize-sh-slide1.png",
+          "https://i.ibb.co/MsddFjf/riize-sh-slide2.png",
+          "https://i.ibb.co/BV6xPsh/riize-sh-slide3.png",
+        ],
         birth: ["2003년 11월 21일 (20세)", "경기도 시흥시 능곡동"],
         nationality: "대한민국",
         physical: "174cm | 54~55kg | A형 | 265mm",
@@ -588,7 +684,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
           "이찬영 (李燦榮, Lee Chanyoung)",
         ],
         englishName: "Anton",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/wRBRjWq/riize-anton-slide1.png",
+          "https://i.ibb.co/jgJh7hc/riize-anton-slide2.png",
+          "https://i.ibb.co/bgtVNSC/riize-anton-slide3.png",
+        ],
         birth: ["2004년 3월 21일 (20세)", "매사추세츠 주 보스턴"],
         nationality: "대한민국, 미국 (복수국적)",
         physical: "184cm | 65kg | O형",
@@ -618,7 +718,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       시온: {
         name: "오시온 (吳是溫, Oh Sion, オ·シオン)",
         englishName: "Sion",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/tq2fTBb/nctwish-sion-slide1.png",
+          "https://i.ibb.co/D48MS5K/nctwish-sion-slide2.png",
+          "https://i.ibb.co/cQTRMN1/nctwish-sion-slide3.png",
+        ],
         birth: ["2002년 5월 11일", "전라남도 목포시 상동 목포한사랑병원"],
         nationality: "대한민국",
         physical: "179cm | O형 | 255mm",
@@ -635,7 +739,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       리쿠: {
         name: "前田 陸 (마에다 리쿠, Riku Maeda)",
         englishName: "Riku Maeda",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/RSYbcy3/nctwish-riku-slide1.png",
+          "https://i.ibb.co/b57gPN9/nctwish-riku-slide2.png",
+          "https://i.ibb.co/mtgQPdQ/nctwish-riku-slide3.png",
+        ],
         birth: ["2003년 6월 28일", "후쿠이현"],
         nationality: "일본",
         physical: "175cm | AB형 | 280mm",
@@ -650,7 +758,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       유우시: {
         name: "得能 勇志 (토쿠노 유우시, Yūshi Tokuno)",
         englishName: "Yūshi Tokuno",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/vjTL8ZL/nctwish-yushi-slide1.png",
+          "https://i.ibb.co/wsZh6ZZ/nctwish-yushi-slide2.png",
+          "https://i.ibb.co/G27WwPS/nctwish-yushi-slide3.png",
+        ],
         birth: ["2004년 4월 5일", "도쿄도 고토구"],
         nationality: "일본",
         physical: "175cm | A형 | 265mm",
@@ -669,7 +781,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       재희: {
         name: "김대영 (金垈永, Kim Daeyoung, キム·デヨン)",
         englishName: "JAEHEE",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/hR1H87r/nctwish-jh-slide1.png",
+          "https://i.ibb.co/jHG11jx/nctwish-jh-slide2.png",
+          "https://i.ibb.co/rmRH3N5/nctwish-jh-slide3.png",
+        ],
         birth: ["2005년 6월 21일", "대구광역시 달서구 장기동"],
         nationality: "대한민국",
         physical: "185cm | 65kg | O형",
@@ -689,7 +805,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       료: {
         name: "廣瀬 遼 (히로세 료, Ryo Hirose)",
         englishName: "Ryo Hirose",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/t3jfCvS/nctwish-ryo-slide1.png",
+          "https://i.ibb.co/mCk7SWg/nctwish-ryo-slide2.png",
+          "https://i.ibb.co/F8Z9Q5k/nctwish-ryo-slide3.png",
+        ],
         birth: ["2007년 8월 4일", "교토부"],
         nationality: "일본",
         physical: "A형 | 260mm",
@@ -705,7 +825,11 @@ export const memberSpecifics: IMemberSpecificGroups = {
       사쿠야: {
         name: "藤永 咲哉 (후지나가 사쿠야, Sakuya Fujinaga)",
         englishName: "Sakuya Fujinaga",
-        imgs: [],
+        imgs: [
+          "https://i.ibb.co/2hJvHdK/nctwish-sakuya-slide1.png",
+          "https://i.ibb.co/ZSGTcvj/nctwish-sakuya-slide2.png",
+          "https://i.ibb.co/8zQ696W/nctwish-sakuya-slide3.png",
+        ],
         birth: ["2007년 11월 18일", "이시카와현"],
         nationality: "일본",
         physical: "175cm | AB형",
