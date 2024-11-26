@@ -1,7 +1,7 @@
-import { IidolGroup } from "../types/idol";
+import { IidolGroupObj } from "../types/idol";
 
-export const IdolGroups: IidolGroup[] = [
-  {
+export const IdolGroups: IidolGroupObj = {
+  THEBOYZ: {
     name: "THEBOYZ",
     logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png",
     slogan: "Best We THE BOYZ! 안녕하세요, 더보이즈입니다!",
@@ -261,7 +261,7 @@ export const IdolGroups: IidolGroup[] = [
     albumconbgColor: "#FFFFFF",
     albumcontextColor: "#000000",
   },
-  {
+  ZEROBASEONE: {
     name: "ZEROBASEONE",
     logo: "https://i.ibb.co/BNFgCgJ/zb1-logo.png",
     mainPhoto: "https://i.ibb.co/4Y65WrT/zb1-main.png",
@@ -399,7 +399,7 @@ export const IdolGroups: IidolGroup[] = [
     albumconbgColor: "#FFFFFF",
     albumcontextColor: "#000000",
   },
-  {
+  RIIZE: {
     name: "RIIZE",
     logo: "https://i.ibb.co/S364BVb/riize-logo.png",
     mainPhoto: "https://i.ibb.co/Z6fZXph/riize-main.png",
@@ -526,7 +526,7 @@ export const IdolGroups: IidolGroup[] = [
     albumconbgColor: "#000000",
     albumcontextColor: "#ffffff",
   },
-  {
+  NCTWISH: {
     name: "NCTWISH",
     logo: "https://i.ibb.co/GHFSF8j/nctwish-logo.png",
     mainPhoto: "https://i.ibb.co/n7q7HBd/nctwish-main.png",
@@ -624,4 +624,4 @@ export const IdolGroups: IidolGroup[] = [
     albumconbgColor: "#000000",
     albumcontextColor: "#ffffff",
   },
-];
+};

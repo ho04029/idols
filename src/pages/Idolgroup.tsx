@@ -1,8 +1,16 @@
-import { IidolGroup } from "../types/idol";
+import { useLocation, NavLink } from "react-router-dom";
+
+import { IdolGroups } from "../data/idolgroup";
 import IdolgroupMember from "../components/IdolgroupMember";
 import IdolgroupAlbum from "../components/IdolgroupAlbum";
 
-const Idolgroup = ({ group }: { group: IidolGroup }) => {
+const Idolgroup = () => {
+  const location = useLocation();
+
+  const groupName = location.pathname.split("/")[2];
+  const group = IdolGroups[groupName];
+  const groupList = Object.keys(IdolGroups);
+
   const {
     name,
     logo,
@@ -15,10 +23,36 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
     memberConTextColor,
     albumconbgColor,
     albumcontextColor,
+    textColor,
+    headerActiveColor,
+    headerActiveTextColor,
+    bgColor,
   } = group;
 
   return (
-    <>
+    <div
+      className="w-[430px] flex flex-col items-center"
+      style={{ backgroundColor: bgColor, color: textColor }}
+    >
+      <header className="flex mt-[37px] mb-[38px] text-[14px] font-bold">
+        <nav className="w-full flex justify-between gap-[18px]">
+          {groupList.map((navGroupName, idx) => (
+            <NavLink
+              key={idx}
+              to={`/idolgroup/${navGroupName}`}
+              style={({ isActive }) => ({
+                color: isActive ? headerActiveTextColor : textColor,
+                backgroundColor: isActive ? headerActiveColor : "transparent",
+                borderRadius: isActive ? "5px" : "none",
+                padding: isActive ? "4px 5px 5px" : "none",
+              })}
+            >
+              {navGroupName}
+            </NavLink>
+          ))}
+        </nav>
+      </header>
+
       <section className="flex flex-col items-center mb-[54px]">
         <img src={logo} alt={`${name} logo`} className="h-[47px] mb-[18px]" />
         <img
@@ -104,7 +138,7 @@ const Idolgroup = ({ group }: { group: IidolGroup }) => {
           ))}
         </section>
       )}
-    </>
+    </div>
   );
 };
 

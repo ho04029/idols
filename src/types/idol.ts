@@ -42,6 +42,10 @@ export interface IidolGroup {
   albumcontextColor: string;
 }
 
+export interface IidolGroupObj {
+  [groupName: string]: IidolGroup;
+}
+
 export interface IMemberSpecific {
   name: string | string[];
   englishName: string;

@@ -1,52 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { IdolGroups } from "./data/idolgroup";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Idolgroup from "./pages/Idolgroup";
-import Layout from "./components/Layout";
 import IdolMemberSpecific from "./pages/IdolMemberSpecific";
+import NotFound from "./pages/NotFound";
 
 const routerData = [
-  { path: "/", element: <Home /> },
   {
     path: "/",
     element: <Layout />,
+    errorElement: <NotFound />,
     children: [
+      { path: "", element: <Home /> },
       {
-        path: "/idolgroup/THEBOYZ",
-        element: <Idolgroup group={IdolGroups[0]} />,
+        path: "/idolgroup/:groupName",
+        element: <Idolgroup />,
       },
       {
-        path: "/idolgroup/ZEROBASEONE",
-        element: <Idolgroup group={IdolGroups[1]} />,
-      },
-      {
-        path: "/idolgroup/RIIZE",
-        element: <Idolgroup group={IdolGroups[2]} />,
-      },
-      {
-        path: "/idolgroup/NCTWISH",
-        element: <Idolgroup group={IdolGroups[3]} />,
-      },
-    ],
-  },
-  {
-    path: "/idolgroup",
-    children: [
-      {
-        path: "THEBOYZ/:memberName",
-        element: <IdolMemberSpecific />,
-      },
-      {
-        path: "ZEROBASEONE/:memberName",
-        element: <IdolMemberSpecific />,
-      },
-      {
-        path: "RIIZE/:memberName",
-        element: <IdolMemberSpecific />,
-      },
-      {
-        path: "NCTWISH/:memberName",
+        path: "/idolgroup/:groupName/:memberName",
         element: <IdolMemberSpecific />,
       },
     ],

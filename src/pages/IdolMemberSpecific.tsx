@@ -54,50 +54,48 @@ const IdolMemberSpecific = () => {
   } = members[memberName];
 
   return (
-    <div className="flex justify-center">
-      <div
-        className="font-['Loboto'] w-[430px] max-w-full overflow-hidden"
-        style={{ backgroundColor: bgColor, color: txtColor }}
-      >
-        <header>
-          <div>
-            <div className="flex items-center justify-center pt-[33px] pb-[22px]">
-              <img src={logo} alt={`${groupName}_logo`} />
-            </div>
+    <div
+      className="w-[430px] max-w-full overflow-hidden"
+      style={{ backgroundColor: bgColor, color: txtColor }}
+    >
+      <header>
+        <div>
+          <div className="flex items-center justify-center pt-[33px] pb-[22px]">
+            <img src={logo} alt={`${groupName}_logo`} />
           </div>
-        </header>
-        <section>
-          <div className="mt-[34px] mb-[10px]">
-            <Slider slides={imgs} />
-          </div>
-          <div className="flex items-center justify-center text-center flex-col text-xl font-bold mb-[31.35px]">
-            {memberName}
-            <span className="text-[16px]">{englishName}</span>
-          </div>
-          <div className="mx-[21px]">
-            <ul className="text-sm font-medium">
-              <SpecificList title="본명" des={name} />
-              <SpecificList title="출생" des={birth} />
-              <SpecificList title="국적" des={nationality} />
-              <SpecificList title="신체" des={physical} />
-              <SpecificList title="가족" des={familys} />
-              {academics && <SpecificList title="학력" des={academics} />}
-              {religion && <SpecificList title="종교" des={religion} />}
-              <SpecificList title="소속사" des={agency} />
-              <SpecificList title="소속 그룹" des={groupName} />
-              <SpecificList title="포지션" des={position} />
-              <SpecificList title="데뷔" des={debut} />
-              {serialNumber && (
-                <SpecificList title="고유번호" des={serialNumber} />
-              )}
-              <SpecificList title="MBTI" des={mbti} />
-              {symbolNumber && (
-                <SpecificList title="상징번호" des={symbolNumber} />
-              )}
-            </ul>
-          </div>
-        </section>
-      </div>
+        </div>
+      </header>
+      <section>
+        <div className="mt-[34px] mb-[10px]">
+          <Slider slides={imgs} />
+        </div>
+        <div className="flex items-center justify-center text-center flex-col text-xl font-bold mb-[31.35px]">
+          {memberName}
+          <span className="text-[16px]">{englishName}</span>
+        </div>
+        <div className="mx-[21px]">
+          <ul className="text-sm font-medium">
+            <SpecificList title="본명" des={name} />
+            <SpecificList title="출생" des={birth} />
+            <SpecificList title="국적" des={nationality} />
+            <SpecificList title="신체" des={physical} />
+            <SpecificList title="가족" des={familys} />
+            {academics && <SpecificList title="학력" des={academics} />}
+            {religion && <SpecificList title="종교" des={religion} />}
+            <SpecificList title="소속사" des={agency} />
+            <SpecificList title="소속 그룹" des={groupName} />
+            <SpecificList title="포지션" des={position} />
+            <SpecificList title="데뷔" des={debut} />
+            {serialNumber && (
+              <SpecificList title="고유번호" des={serialNumber} />
+            )}
+            <SpecificList title="MBTI" des={mbti} />
+            {symbolNumber && (
+              <SpecificList title="상징번호" des={symbolNumber} />
+            )}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 };
