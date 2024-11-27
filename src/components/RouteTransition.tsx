@@ -1,20 +1,17 @@
 import React from "react";
-import { Location } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const RouteTransition = ({
   location,
   children,
 }: {
-  location: Location;
+  location: string;
   children: React.ReactNode;
 }) => {
-  const pathname = location.pathname;
-
   return (
     <TransitionGroup>
       <CSSTransition
-        key={pathname}
+        key={location}
         timeout={300}
         classNames={{
           enter: "animate-fadeInRight",
