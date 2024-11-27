@@ -1,6 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  const navigate = useNavigate();
+
+  const backHandler = () => {
+    navigate(-1);
+  };
+
+  const homeHandler = () => {
+    navigate("/", { replace: true });
+  };
   return (
     <div className=" text-[#151147] absolute right-1/2 top-1/2 translate-x-1/2 -translate-y-1/2 w-[430px] max-w-full overflow-hidden">
       <img
@@ -18,10 +28,16 @@ const NotFound = () => {
         해주십시오.
       </p>
       <div className="flex justify-between">
-        <button className="w-[160px] bg-[#151147] text-[#FFFFFF] text-[16px] font-semibold py-[7px] rounded-[16px]">
+        <button
+          onClick={backHandler}
+          className="w-[160px] bg-[#151147] text-[#FFFFFF] text-[16px] font-semibold py-[7px] rounded-[16px]"
+        >
           이전 페이지로 이동
         </button>
-        <button className="w-[160px] bg-[#151147] text-[#FFFFFF] text-[16px] font-semibold py-[7px] rounded-[16px]">
+        <button
+          onClick={homeHandler}
+          className="w-[160px] bg-[#151147] text-[#FFFFFF] text-[16px] font-semibold py-[7px] rounded-[16px]"
+        >
           홈으로 이동
         </button>
       </div>
