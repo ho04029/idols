@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 
+import { ageCalculator } from "../utils/ageCalculator";
 import { memberSpecifics } from "../data/memberSpecific";
 import Slider from "../components/Slider";
 
@@ -53,6 +54,17 @@ const IdolMemberSpecific = () => {
     symbolNumber,
   } = members[memberName];
 
+  const formattedBirth = birth[0]
+    .split("년 ")
+    .join("-")
+    .split("월 ")
+    .join("-")
+    .split("일")
+    .join("");
+
+  const age = ageCalculator(formattedBirth);
+  const updatedBirth = [`${birth[0]} (${age}세)`, birth[1]];
+
   return (
     <div
       className="w-[430px] max-w-full overflow-hidden"
@@ -76,7 +88,7 @@ const IdolMemberSpecific = () => {
         <div className="mx-[21px]">
           <ul className="text-sm font-medium">
             <SpecificList title="본명" des={name} />
-            <SpecificList title="출생" des={birth} />
+            <SpecificList title="출생" des={updatedBirth} />
             <SpecificList title="국적" des={nationality} />
             <SpecificList title="신체" des={physical} />
             <SpecificList title="가족" des={familys} />

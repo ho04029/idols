@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -6,7 +6,7 @@ import Idolgroup from "./pages/Idolgroup";
 import IdolMemberSpecific from "./pages/IdolMemberSpecific";
 import NotFound from "./pages/NotFound";
 
-const routerData = [
+const routerData: RouteObject[] = [
   {
     path: "/",
     element: <Layout />,
