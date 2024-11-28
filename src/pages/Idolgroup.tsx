@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { IdolGroups } from "../data/idolgroup";
-import RouteTransition from "../components/RouteTransition";
+import RouteTransition, {
+  leftToRight,
+  rightToLeft,
+} from "../components/RouteTransition";
 import IdolgroupMember from "../components/IdolgroupMember";
 import IdolgroupAlbum from "../components/IdolgroupAlbum";
 
 const Idolgroup = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const location = useLocation();
 
   const groupName = location.pathname.split("/")[2];
@@ -41,6 +46,13 @@ const Idolgroup = () => {
             <NavLink
               key={idx}
               to={`/idolgroup/${navGroupName}`}
+              onClick={() => setActiveIndex(idx)}
+              state={{
+                direction:
+                  activeIndex === null || activeIndex < idx
+                    ? rightToLeft
+                    : leftToRight,
+              }}
               style={({ isActive }) => ({
                 color: isActive ? headerActiveTextColor : textColor,
                 backgroundColor: isActive ? headerActiveColor : "transparent",
@@ -53,7 +65,7 @@ const Idolgroup = () => {
           ))}
         </nav>
       </header>
-      <RouteTransition location={groupName}>
+      <RouteTransition location={location}>
         <main>
           <section className="flex flex-col items-center mb-[54px]">
             <img

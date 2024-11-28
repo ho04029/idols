@@ -1,21 +1,34 @@
 import React from "react";
+import { Location } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+export const leftToRight = "leftToRight";
+export const rightToLeft = "rightToLeft";
 
 const RouteTransition = ({
   location,
   children,
 }: {
-  location: string;
+  location: Location;
   children: React.ReactNode;
 }) => {
+  const pathname = location.pathname;
+  const direction = location.state.direction;
+
   return (
-    <TransitionGroup className="w-full">
+    <TransitionGroup className="w-full relative">
       <CSSTransition
-        key={location}
+        key={pathname}
         timeout={300}
         classNames={{
-          enter: "animate-fadeInRight",
-          exit: "animate-fadeOutLeft",
+          enter:
+            direction === rightToLeft
+              ? "animate-fadeInRight"
+              : "animate-fadeInLeft",
+          exit:
+            direction === rightToLeft
+              ? "animate-fadeOutLeft"
+              : "animate-fadeOutRight",
         }}
         unmountOnExit
       >
