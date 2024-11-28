@@ -13,7 +13,7 @@ const RouteTransition = ({
   children: React.ReactNode;
 }) => {
   const pathname = location.pathname;
-  const direction = location.state.direction;
+  const direction = location.state?.direction;
 
   return (
     <TransitionGroup className="w-full relative">
