@@ -18,8 +18,11 @@ const IdolgroupMember = ({
   const age = ageCalculator(birth);
 
   return (
-    <Link to={`/idolgroup/${groupName}/${name}`}>
-      <li className="flex flex-col items-center mb-[22px]">
+    <li>
+      <Link
+        to={`/idolgroup/${groupName}/${name}`}
+        className="flex flex-col items-center mb-[22px]"
+      >
         <img
           src={img}
           alt={`${name}`}
@@ -33,8 +36,8 @@ const IdolgroupMember = ({
         >
           <p>{role}</p>
         </div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 };
 

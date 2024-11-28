@@ -71,7 +71,7 @@ const Idolgroup = () => {
 
           <section className="w-full flex flex-col items-center mb-[60px]">
             <h3 className="text-4xl font-extrabold mb-[24px]">MEMBERS</h3>
-            <ul className="w-full grid grid-cols-2">
+            <ul className="w-full max-w-fit grid grid-cols-2 gap-x-[57px]">
               {members.map((member, idx) => (
                 <IdolgroupMember
                   key={idx}

@@ -9,7 +9,7 @@ const RouteTransition = ({
   children: React.ReactNode;
 }) => {
   return (
-    <TransitionGroup>
+    <TransitionGroup className="w-full">
       <CSSTransition
         key={location}
         timeout={300}
