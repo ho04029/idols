@@ -22,14 +22,14 @@ module.exports = {
         },
       },
       animation: {
-        fadeInRight: "fadeInRight 300ms ease-out forwards",
-        fadeOutLeft: "fadeOutLeft 300ms ease-out forwards",
-        fadeInLeft: "fadeInLeft 300ms ease-out forwards",
-        fadeOutRight: "fadeOutRight 300ms ease-out forwards",
+        fadeInRight: "fadeInRight 600ms ease-out forwards",
+        fadeOutLeft: "fadeOutLeft 600ms ease-out forwards",
+        fadeInLeft: "fadeInLeft 600ms ease-out forwards",
+        fadeOutRight: "fadeOutRight 600ms ease-out forwards",
         fadeOutAndInRight:
-          "fadeOutLeft 300ms ease-out forwards, fadeInRight 300ms ease-out forwards",
+          "fadeOutLeft 600ms ease-out forwards, fadeInRight 300ms ease-out forwards",
         fadeOutAndInLeft:
-          "fadeOutRight 300ms ease-out forwards, fadeInLeft 300ms ease-out forwards",
+          "fadeOutRight 600ms ease-out forwards, fadeInLeft 300ms ease-out forwards",
       },
     },
   },
