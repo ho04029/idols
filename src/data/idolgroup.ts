@@ -575,7 +575,7 @@ export const IdolGroups: IidolGroupObj = {
           date: "2024. 11. 27",
           series: "Japan 1st Album",
           title: "WISHFUL",
-          img: "https://i.ibb.co/k60SvSG/nctwish-wishful.png",
+          img: "https://i.ibb.co/S3jvDMv/nctwish-wishful.png",
         },
       ],
       미니: [
