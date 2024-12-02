@@ -3,7 +3,9 @@ import "./App.css";
 import { routers } from "./router";
 
 function App() {
-  return <RouterProvider router={routers} />;
+  return (
+    <RouterProvider router={routers} future={{ v7_startTransition: true }} />
+  );
 }
 
 export default App;
