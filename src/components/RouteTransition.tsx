@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Location } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 export const leftToRight = "leftToRight";
 export const rightToLeft = "rightToLeft";
@@ -17,32 +17,26 @@ const RouteTransition = ({
   const direction = location.state?.direction;
 
   return (
-    <TransitionGroup
-      childFactory={(child) => {
-        return React.cloneElement(child, {
-          classNames: {
-            enter:
-              direction === rightToLeft
-                ? "animate-fadeInRight"
-                : "animate-fadeInLeft",
-            exit:
-              direction === rightToLeft
-                ? "animate-fadeOutLeft"
-                : "animate-fadeOutRight",
-          },
-        });
-      }}
-      className="w-full relative"
-    >
+    <SwitchTransition>
       <CSSTransition
         key={pathname}
         nodeRef={nodeRef}
         timeout={300}
+        classNames={{
+          enter:
+            direction === rightToLeft
+              ? "animate-fadeInRight"
+              : "animate-fadeInLeft",
+          exit:
+            direction === rightToLeft
+              ? "animate-fadeOutLeft"
+              : "animate-fadeOutRight",
+        }}
         unmountOnExit
       >
         <div ref={nodeRef}>{children}</div>
       </CSSTransition>
-    </TransitionGroup>
+    </SwitchTransition>
   );
 };
 

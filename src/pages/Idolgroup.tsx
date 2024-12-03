@@ -25,6 +25,8 @@ const Idolgroup = () => {
     }
   }, []);
 
+  console.log(activeIndex);
+
   const {
     name,
     logo,
@@ -50,27 +52,36 @@ const Idolgroup = () => {
     >
       <header className="flex mt-[37px] mb-[38px] text-[14px] font-bold">
         <nav className="w-full flex justify-between gap-[18px]">
-          {groupList.map((navGroupName, idx) => (
-            <NavLink
-              key={idx}
-              to={`/idolgroup/${navGroupName}`}
-              onClick={() => setActiveIndex(idx)}
-              state={{
-                direction:
-                  activeIndex === null || activeIndex < idx
-                    ? rightToLeft
-                    : leftToRight,
-              }}
-              style={({ isActive }) => ({
-                color: isActive ? headerActiveTextColor : textColor,
-                backgroundColor: isActive ? headerActiveColor : "transparent",
-                borderRadius: isActive ? "5px" : "none",
-                padding: isActive ? "4px 5px 5px" : "none",
-              })}
-            >
-              {navGroupName}
-            </NavLink>
-          ))}
+          {groupList.map((navGroupName, idx) => {
+            console.log(
+              `${idx}: ${
+                activeIndex === null || activeIndex <= idx
+                  ? rightToLeft
+                  : leftToRight
+              }`
+            );
+            return (
+              <NavLink
+                key={idx}
+                to={`/idolgroup/${navGroupName}`}
+                onClick={() => setActiveIndex(idx)}
+                state={{
+                  direction:
+                    activeIndex === null || activeIndex <= idx
+                      ? rightToLeft
+                      : leftToRight,
+                }}
+                style={({ isActive }) => ({
+                  color: isActive ? headerActiveTextColor : textColor,
+                  backgroundColor: isActive ? headerActiveColor : "transparent",
+                  borderRadius: isActive ? "5px" : "none",
+                  padding: isActive ? "4px 5px 5px" : "none",
+                })}
+              >
+                {navGroupName}
+              </NavLink>
+            );
+          })}
         </nav>
       </header>
       <RouteTransition location={location}>
