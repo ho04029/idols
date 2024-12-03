@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { IdolGroups } from "../data/idolgroup";
@@ -16,6 +16,14 @@ const Idolgroup = () => {
   const groupName = location.pathname.split("/")[2];
   const group = IdolGroups[groupName];
   const groupList = Object.keys(IdolGroups);
+
+  // 처음 페이지 접속시 activeIndex값을 저장
+  useEffect(() => {
+    const currentIndex = groupList.findIndex((group) => group === groupName);
+    if (currentIndex !== -1) {
+      setActiveIndex(currentIndex);
+    }
+  }, []);
 
   const {
     name,
