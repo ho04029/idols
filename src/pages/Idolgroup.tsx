@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { IdolGroups } from "../data/idolgroup";
-import RouteTransition, {
-  leftToRight,
-  rightToLeft,
-} from "../components/RouteTransition";
+import { transitionDirectionCalculator } from "../utils/transitionDirectionCalculator";
+import RouteTransition from "../components/RouteTransition";
 import IdolgroupMember from "../components/IdolgroupMember";
 import IdolgroupAlbum from "../components/IdolgroupAlbum";
 
 const Idolgroup = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [prevIndex, setPrevIndex] = useState<number | null>(null);
   const location = useLocation();
 
   const groupName = location.pathname.split("/")[2];
   const group = IdolGroups[groupName];
   const groupList = Object.keys(IdolGroups);
+  const direction = transitionDirectionCalculator(activeIndex, prevIndex);
 
   // 처음 페이지 접속시 activeIndex값을 저장
   useEffect(() => {
@@ -25,7 +25,7 @@ const Idolgroup = () => {
     }
   }, []);
 
-  console.log(activeIndex);
+  console.log(activeIndex, prevIndex, direction);
 
   const {
     name,
@@ -53,23 +53,13 @@ const Idolgroup = () => {
       <header className="flex mt-[37px] mb-[38px] text-[14px] font-bold">
         <nav className="w-full flex justify-between gap-[18px]">
           {groupList.map((navGroupName, idx) => {
-            console.log(
-              `${idx}: ${
-                activeIndex === null || activeIndex <= idx
-                  ? rightToLeft
-                  : leftToRight
-              }`
-            );
             return (
               <NavLink
                 key={idx}
                 to={`/idolgroup/${navGroupName}`}
-                onClick={() => setActiveIndex(idx)}
-                state={{
-                  direction:
-                    activeIndex === null || activeIndex <= idx
-                      ? rightToLeft
-                      : leftToRight,
+                onClick={() => {
+                  setPrevIndex(activeIndex);
+                  setActiveIndex(idx);
                 }}
                 style={({ isActive }) => ({
                   color: isActive ? headerActiveTextColor : textColor,
@@ -84,7 +74,7 @@ const Idolgroup = () => {
           })}
         </nav>
       </header>
-      <RouteTransition location={location}>
+      <RouteTransition location={location} direction={direction}>
         <main>
           <section className="flex flex-col items-center mb-[54px]">
             <img

@@ -2,19 +2,19 @@ import React, { useRef } from "react";
 import { Location } from "react-router-dom";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
-export const leftToRight = "leftToRight";
-export const rightToLeft = "rightToLeft";
+import { rightToLeft } from "../data/directionString";
 
 const RouteTransition = ({
   location,
   children,
+  direction,
 }: {
   location: Location;
   children: React.ReactNode;
+  direction: string;
 }) => {
   const nodeRef = useRef<HTMLDivElement | null>(null);
   const pathname = location.pathname;
-  const direction = location.state?.direction;
 
   return (
     <SwitchTransition>
