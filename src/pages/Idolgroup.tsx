@@ -4,8 +4,8 @@ import { useLocation, NavLink } from "react-router-dom";
 import { IdolGroups } from "../data/idolgroup";
 import { transitionDirectionCalculator } from "../utils/transitionDirectionCalculator";
 import RouteTransition from "../components/RouteTransition";
-import IdolgroupMember from "../components/IdolgroupMember";
-import IdolgroupAlbum from "../components/IdolgroupAlbum";
+import IdolgroupMember from "../components/Idolgroup/IdolgroupMember";
+import IdolgroupAlbum from "../components/Idolgroup/IdolgroupAlbum";
 
 const Idolgroup = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

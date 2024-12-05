@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { IidolMember } from "../types/idol";
-import { ageCalculator } from "../utils/ageCalculator";
+import { IidolMember } from "../../types/idol";
+import { ageCalculator } from "../../utils/ageCalculator";
 
 const IdolgroupMember = ({
   groupName,

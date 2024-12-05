@@ -1,4 +1,4 @@
-import { IAlbum } from "../types/idol";
+import { IAlbum } from "../../types/idol";
 
 const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
   const { img, date, series, title, etc } = album;
