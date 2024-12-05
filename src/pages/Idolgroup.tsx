@@ -25,8 +25,6 @@ const Idolgroup = () => {
     }
   }, []);
 
-  console.log(activeIndex, prevIndex, direction);
-
   const {
     name,
     logo,
@@ -87,7 +85,9 @@ const Idolgroup = () => {
               alt={`${name} mainPhoto`}
               className="w-[359px] h-[237px] mb-2"
             />
-            <p className="text-[14px] font-bold">{slogan}</p>
+            <p className="text-center text-[14px] font-bold break-keep">
+              {slogan}
+            </p>
           </section>
 
           <section className="w-full flex flex-col items-center mb-[60px]">
