@@ -1,6 +1,6 @@
-import { IidolGroupObj } from "../types/idol";
+import { IidolGroups } from "../types/idol";
 
-export const IdolGroups: IidolGroupObj = {
+export const IdolGroups: IidolGroups = {
   THEBOYZ: {
     name: "THEBOYZ",
     logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png",

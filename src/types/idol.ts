@@ -42,7 +42,7 @@ export interface IidolGroup {
   albumcontextColor: string;
 }
 
-export interface IidolGroupObj {
+export interface IidolGroups {
   [groupName: string]: IidolGroup;
 }
 
