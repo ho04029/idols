@@ -4,12 +4,10 @@ import { IidolMember } from "../../types/idol";
 import { ageCalculator } from "../../utils/ageCalculator";
 
 const IdolgroupMember = ({
-  groupName,
   member,
   memberConColor,
   memberConTextColor,
 }: {
-  groupName: string;
   member: IidolMember;
   memberConColor: string;
   memberConTextColor: string;
@@ -19,10 +17,7 @@ const IdolgroupMember = ({
 
   return (
     <li>
-      <Link
-        to={`/idolgroup/${groupName}/${name}`}
-        className="flex flex-col items-center mb-[22px]"
-      >
+      <Link to={`${name}`} className="flex flex-col items-center mb-[22px]">
         <img
           src={img}
           alt={`${name}`}

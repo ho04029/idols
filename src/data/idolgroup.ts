@@ -625,3 +625,5 @@ export const IdolGroups: IidolGroups = {
     albumcontextColor: "#ffffff",
   },
 };
+
+export const groupList = Object.keys(IdolGroups);
