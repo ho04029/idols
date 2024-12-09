@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
+import { useMenuStore } from "../store/menuOpen";
 import { IdolGroups, groupList } from "../data/idolgroup";
 import { transitionDirectionCalculator } from "../utils/transitionDirectionCalculator";
 import RouteTransition from "../components/RouteTransition";
 import IdolgroupMember from "../components/Idolgroup/IdolgroupMember";
 import IdolgroupComponent from "../components/Idolgroup/IdolgroupComponent";
+import HamburgerMenu, { MobileMenu } from "../components/HamburgerMenu";
 
 const Idolgroup = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [prevIndex, setPrevIndex] = useState<number | null>(null);
   const location = useLocation();
+  const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
 
   const groupName = location.pathname.split("/")[2];
   const group = IdolGroups[groupName];
@@ -26,7 +29,14 @@ const Idolgroup = () => {
 
   return (
     <IdolgroupComponent group={group}>
-      <header className="flex mt-[37px] mb-[38px] text-[14px] font-bold">
+      {isMenuOpen && <MobileMenu />}
+      <header
+        className="sticky w-full top-0 left-0 mt-[37px] mb-[38px] text-[14px] font-bold z-10"
+        style={{ backgroundColor: group.bgColor }}
+      >
+        <div>
+          <HamburgerMenu />
+        </div>
         <nav className="w-full flex justify-between gap-[18px]">
           {groupList.map((navGroupName, idx) => {
             return (
