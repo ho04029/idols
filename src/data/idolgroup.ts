@@ -540,7 +540,7 @@ export const IdolGroups: IidolGroups = {
     bgColor: "#F0A240",
     textColor: "#000000",
     headerActiveColor: "#000000",
-    headerActiveTextColor: "#F0A240",
+    headerActiveTextColor: "#ffffff",
     memberConColor: "#000000",
     memberConTextColor: "#ffffff",
     albumconbgColor: "#000000",

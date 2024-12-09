@@ -31,13 +31,13 @@ const Idolgroup = () => {
     <IdolgroupComponent group={group}>
       {isMenuOpen && <MobileMenu />}
       <header
-        className="sticky w-full top-0 left-0 mt-[37px] mb-[38px] text-[14px] font-bold z-10"
+        className="sticky w-full top-0 left-0 pt-[37px] pb-[38px] text-[14px] font-bold z-10"
         style={{ backgroundColor: group.bgColor }}
       >
         <div>
-          <HamburgerMenu />
+          <HamburgerMenu className={`text-[${group.textColor}]`} />
         </div>
-        <nav className="w-full flex justify-between gap-[18px]">
+        <nav className="w-full flex justify-center sm:justify-start items-center gap-[18px] sm:gap-[60px] border-b-2">
           {groupList.map((navGroupName, idx) => {
             return (
               <NavLink

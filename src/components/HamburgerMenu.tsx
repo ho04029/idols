@@ -12,9 +12,9 @@ export const MobileMenu = () => {
   );
 };
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ className }: { className?: string }) => {
   const openMenuHandler = useMenuStore((state) => state.openMenuHandler);
-  return <AiOutlineMenu onClick={openMenuHandler} />;
+  return <AiOutlineMenu onClick={openMenuHandler} className={`${className}`} />;
 };
 
 export default HamburgerMenu;
