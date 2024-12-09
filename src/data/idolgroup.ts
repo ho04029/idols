@@ -212,6 +212,26 @@ export const IdolGroups: IidolGroups = {
           img: "https://i.ibb.co/QYxP9ss/theboyz-dear.png",
         },
       ],
+      기타: [
+        {
+          date: "2021. 07. 15",
+          series: "UNIVERSE MUSIC",
+          title: "Drink It ",
+          img: "https://i.ibb.co/DD0RRVS/theboyz-Drink-It.png",
+        },
+        {
+          date: "2022. 06. 17",
+          series: "UNIVERSE MUSIC",
+          title: "Sweet",
+          img: "https://i.ibb.co/jzZrdbj/theboyz-Sweet.png",
+        },
+        {
+          date: "2023. 04. 23",
+          series: "1st Special Single by 뽀로로×더보이즈",
+          title: "놀자",
+          img: "https://i.ibb.co/h8Lz1vS/theboyz-nolza.png",
+        },
+      ],
     },
     japanAlbums: {
       정규: [
