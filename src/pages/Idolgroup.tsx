@@ -1,22 +1,22 @@
-import { useState, useEffect } from "react";
-import { useLocation, NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-import { useMenuStore } from "../store/menuOpen";
+import { useIdolGroupPageIndexStore } from "../store/store";
 import { IdolGroups, groupList } from "../data/idolgroup";
 import { transitionDirectionCalculator } from "../utils/transitionDirectionCalculator";
 import RouteTransition from "../components/RouteTransition";
 import IdolgroupMember from "../components/Idolgroup/IdolgroupMember";
 import IdolgroupComponent from "../components/Idolgroup/IdolgroupComponent";
-import HamburgerMenu, { MobileMenu } from "../components/HamburgerMenu";
+import IdolgroupHeader from "../components/Idolgroup/IdolgroupHeader";
 
 const Idolgroup = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [prevIndex, setPrevIndex] = useState<number | null>(null);
   const location = useLocation();
-  const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
 
   const groupName = location.pathname.split("/")[2];
   const group = IdolGroups[groupName];
+
+  const { activeIndex, prevIndex, setActiveIndex } =
+    useIdolGroupPageIndexStore();
   const direction = transitionDirectionCalculator(activeIndex, prevIndex);
 
   // 처음 페이지 접속시 activeIndex값을 저장
@@ -29,45 +29,10 @@ const Idolgroup = () => {
 
   return (
     <IdolgroupComponent group={group}>
-      {isMenuOpen && <MobileMenu />}
-      <header
-        className="sticky w-full top-0 left-0 pt-[37px] pb-[38px] text-[14px] font-bold z-10"
-        style={{ backgroundColor: group.bgColor }}
-      >
-        <div>
-          <img src={`/images/icon_ddol.svg`} alt="MY IDOL" />
-          <HamburgerMenu className={`text-[${group.textColor}]`} />
-        </div>
-        <nav className="w-full flex justify-center sm:justify-start items-center gap-[18px] sm:gap-[60px] border-b-2">
-          {groupList.map((navGroupName, idx) => {
-            return (
-              <NavLink
-                key={idx}
-                to={`/idolgroup/${navGroupName}`}
-                onClick={() => {
-                  setPrevIndex(activeIndex);
-                  setActiveIndex(idx);
-                }}
-                style={({ isActive }) => ({
-                  color: isActive
-                    ? group.headerActiveTextColor
-                    : group.textColor,
-                  backgroundColor: isActive
-                    ? group.headerActiveColor
-                    : "transparent",
-                  borderRadius: isActive ? "5px" : "none",
-                  padding: isActive ? "4px 5px 5px" : "none",
-                })}
-              >
-                {navGroupName}
-              </NavLink>
-            );
-          })}
-        </nav>
-      </header>
+      <IdolgroupHeader group={group} location={location} />
       <RouteTransition location={location} direction={direction}>
         <main>
-          <IdolgroupComponent.Section>
+          <IdolgroupComponent.Section id="home">
             <img
               src={group.logo}
               alt={`${group.name} logo`}
@@ -83,7 +48,7 @@ const Idolgroup = () => {
             </p>
           </IdolgroupComponent.Section>
 
-          <IdolgroupComponent.Section>
+          <IdolgroupComponent.Section id="members">
             <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
             <IdolgroupComponent.Ul length={group.members.length}>
               {group.members.map((member, idx) => (
@@ -100,6 +65,7 @@ const Idolgroup = () => {
             albums={group.albums}
             albumConBgColor={group.albumconbgColor}
             albumContextColor={group.albumcontextColor}
+            id="albums"
           />
           {group.japanAlbums && (
             <IdolgroupComponent.Albums

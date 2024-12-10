@@ -23,10 +23,17 @@ const IdolgroupComponent = ({ group, children }: IIdolgroupProps) => {
   );
 };
 
-IdolgroupComponent.Section = ({ children, className }: IProps) => {
+type ISectionProps = IProps & React.ComponentPropsWithoutRef<"section">;
+
+IdolgroupComponent.Section = ({
+  children,
+  className,
+  ...props
+}: ISectionProps) => {
   return (
     <section
       className={`w-full flex flex-col items-center mb-[60px] ${className}`}
+      {...props}
     >
       {children}
     </section>
@@ -62,6 +69,7 @@ interface IdolgroupAlbumsProps {
   albumConBgColor: string;
   albumContextColor: string;
   sectionTitle?: string;
+  id?: string;
 }
 
 IdolgroupComponent.Albums = ({
@@ -69,8 +77,9 @@ IdolgroupComponent.Albums = ({
   albumConBgColor,
   albumContextColor,
   sectionTitle = "Albums",
+  id,
 }: IdolgroupAlbumsProps) => (
-  <IdolgroupComponent.Section>
+  <IdolgroupComponent.Section id={id}>
     <IdolgroupComponent.H3>{sectionTitle}</IdolgroupComponent.H3>
     {Object.keys(albums).map((category, idx) => (
       <section

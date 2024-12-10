@@ -1,20 +1,16 @@
 import React from "react";
 
-import { useMenuStore } from "../store/menuOpen";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
-export const MobileMenu = () => {
-  const closeMenuHandler = useMenuStore((state) => state.closeMenuHandler);
-  return (
-    <div className="absolute top-0 left-0 z-50 w-full h-screen bg-white">
-      <AiOutlineClose onClick={closeMenuHandler} className="text-black" />
-    </div>
-  );
-};
+import { useMenuStore } from "../store/store";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const HamburgerMenu = ({ className }: { className?: string }) => {
   const openMenuHandler = useMenuStore((state) => state.openMenuHandler);
-  return <AiOutlineMenu onClick={openMenuHandler} className={`${className}`} />;
+  return (
+    <AiOutlineMenu
+      onClick={openMenuHandler}
+      className={`text-[20px] ${className}`}
+    />
+  );
 };
 
 export default HamburgerMenu;
