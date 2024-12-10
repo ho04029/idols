@@ -35,6 +35,7 @@ const Idolgroup = () => {
         style={{ backgroundColor: group.bgColor }}
       >
         <div>
+          <img src={`/images/icon_ddol.svg`} alt="MY IDOL" />
           <HamburgerMenu className={`text-[${group.textColor}]`} />
         </div>
         <nav className="w-full flex justify-center sm:justify-start items-center gap-[18px] sm:gap-[60px] border-b-2">
