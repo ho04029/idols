@@ -12,7 +12,6 @@ interface IIdolgroupHeader {
 }
 
 const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
-  const [activeSection, setActiveSection] = useState<string>("");
   const headerRef = useRef<HTMLDivElement>(null);
 
   const { activeIndex, setActiveIndex, setPrevIndex } =
@@ -24,25 +23,6 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
     { id: "members", label: "MEMBERS" },
     { id: "albums", label: "ALBUMS" },
   ];
-
-  // 현재 스크롤 위치에 따라 활성화된 섹션 설정
-  useEffect(() => {
-    const handleScroll = () => {
-      sectionLinks.forEach((section) => {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // 섹션이 화면 중앙 근처에 있으면 활성화
-          if (rect.top >= -100 && rect.top <= window.innerHeight / 2) {
-            setActiveSection(section.id);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [sectionLinks]);
 
   // 스크롤 이동 처리
   useEffect(() => {
@@ -75,7 +55,7 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
         <HamburgerMenu className={`text-[${group.textColor}]`} />
       </div>
       <nav
-        className="w-full flex justify-around lg:justify-start items-center pb-[24px] lg:pb-[76px] lg:pl-[120px] lg:gap-[60px]"
+        className="w-full flex justify-around lg:justify-start items-center pb-[24px] lg:pb-[76px] lg:px-[120px] lg:gap-[40px]"
         style={{ borderBottom: `2px solid ${group.textColor}` }}
       >
         {groupList.map((navGroupName, idx) => {
@@ -87,13 +67,16 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
                 setPrevIndex(activeIndex);
                 setActiveIndex(idx);
               }}
+              className={({ isActive }) =>
+                isActive
+                  ? "p-[3px] lg:py-[8px] lg:px-[15px] rounded lg:rounded-3xl"
+                  : ""
+              }
               style={({ isActive }) => ({
                 color: isActive ? group.headerActiveTextColor : group.textColor,
                 backgroundColor: isActive
                   ? group.headerActiveColor
                   : "transparent",
-                borderRadius: isActive ? "5px" : "none",
-                padding: isActive ? "4px 5px 5px" : "none",
               })}
             >
               {navGroupName}
@@ -101,26 +84,9 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
           );
         })}
       </nav>
-      <nav className="w-full flex justify-center lg:justify-start items-center pt-[23px] lg:pt-[62px] pb-[40px] lg:px-[120px] gap-[18px] xl:gap-[60px]">
+      <nav className="w-full flex justify-center lg:justify-start items-center pt-[23px] lg:pt-[62px] pb-[40px] lg:px-[120px] gap-[18px] lg:gap-[40px]">
         {sectionLinks.map((section, idx) => (
-          <Link
-            key={idx}
-            to={`#${section.id}`}
-            onClick={() => setActiveSection(section.id)}
-            style={{
-              color:
-                activeSection === section.id
-                  ? group.headerActiveTextColor
-                  : group.textColor,
-              backgroundColor:
-                activeSection === section.id
-                  ? group.headerActiveColor
-                  : "transparent",
-              borderRadius: activeSection === section.id ? "5px" : "none",
-              padding: activeSection === section.id ? "4px 5px 5px" : "none",
-            }}
-            className="cursor-pointer"
-          >
+          <Link key={idx} to={`#${section.id}`} className="cursor-pointer">
             {section.label}
           </Link>
         ))}
