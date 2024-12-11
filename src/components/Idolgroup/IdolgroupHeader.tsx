@@ -12,7 +12,6 @@ interface IIdolgroupHeader {
 }
 
 const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
-  const [headerHeight, setHeaderHeight] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("");
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -45,28 +44,6 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionLinks]);
 
-  //헤더 높이 측정
-  useEffect(() => {
-    const headerElement = headerRef.current;
-
-    if (headerElement) {
-      // 초기 높이 설정
-      setHeaderHeight(headerElement.offsetHeight);
-
-      // ResizeObserver로 높이 감지
-      const observer = new ResizeObserver(() => {
-        setHeaderHeight(headerElement.offsetHeight);
-      });
-
-      observer.observe(headerElement);
-
-      // 컴포넌트 언마운트 시 observer 해제
-      return () => {
-        observer.disconnect();
-      };
-    }
-  }, []);
-
   // 스크롤 이동 처리
   useEffect(() => {
     const hash = location.hash;
@@ -76,24 +53,31 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
         const elementTop =
           targetElement.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: elementTop - headerHeight,
+          top: elementTop,
           behavior: "smooth",
         });
       }
     }
-  }, [location, headerHeight]);
+  }, [location]);
 
   return (
     <header
       ref={headerRef}
-      className="sticky w-full top-0 left-0 xl:mt-[51px] text-[14px] xl:text-[40px] font-bold z-10"
+      className="w-full top-0 left-0 xl:mt-[51px] text-[14px] lg:text-[30px] font-bold z-10"
       style={{ backgroundColor: group.bgColor }}
     >
-      <div className="flex justify-between pl-[50%] pr-[47px] py-[28px]">
-        <img src={`/images/icon_ddol.svg`} alt="MY IDOL" className="w-[22px]" />
+      <div className="flex justify-between items-start lg:items-center pl-[50%] pr-[47px] lg:px-[120px] py-[28px] lg:py-[42px]">
+        <img
+          src={`/images/icon_ddol.svg`}
+          alt="MY IDOL"
+          className="w-[22px] lg:w-[54px]"
+        />
         <HamburgerMenu className={`text-[${group.textColor}]`} />
       </div>
-      <nav className="w-full flex justify-center lg:justify-start items-center pb-[24px] xl:pl-[186px] gap-[18px] xl:gap-[60px] border-b-2">
+      <nav
+        className="w-full flex justify-around lg:justify-start items-center pb-[24px] lg:pb-[76px] lg:pl-[120px] lg:gap-[60px]"
+        style={{ borderBottom: `2px solid ${group.textColor}` }}
+      >
         {groupList.map((navGroupName, idx) => {
           return (
             <NavLink
@@ -117,7 +101,7 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
           );
         })}
       </nav>
-      <nav className="w-full flex justify-center lg:justify-start items-center pt-[23px] pb-[40px] xl:pl-[186px] gap-[18px] xl:gap-[60px]">
+      <nav className="w-full flex justify-center lg:justify-start items-center pt-[23px] lg:pt-[62px] pb-[40px] lg:px-[120px] gap-[18px] xl:gap-[60px]">
         {sectionLinks.map((section, idx) => (
           <Link
             key={idx}
