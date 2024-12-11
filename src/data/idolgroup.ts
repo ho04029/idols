@@ -247,6 +247,12 @@ export const IdolGroups: IidolGroups = {
           title: "Delicious",
           img: "https://i.ibb.co/SmBKdms/theboyz-delicious.png",
         },
+        {
+          date: "2024. 07. 19",
+          series: "JAPAN 3rd ALBUM",
+          title: "Gibberish",
+          img: "https://i.ibb.co/4m0BLfN/theboyz-Gibberish.png",
+        },
       ],
       미니: [
         {
