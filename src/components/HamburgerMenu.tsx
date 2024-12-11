@@ -1,14 +1,15 @@
 import React from "react";
 
 import { useMenuStore } from "../store/store";
-import { AiOutlineMenu } from "react-icons/ai";
 
 const HamburgerMenu = ({ className }: { className?: string }) => {
   const openMenuHandler = useMenuStore((state) => state.openMenuHandler);
   return (
-    <AiOutlineMenu
+    <img
+      src={`/images/icon_hamburger.svg`}
+      alt="menu"
       onClick={openMenuHandler}
-      className={`text-[20px] ${className}`}
+      className={`cursor-pointer w-[20px] lg:w-[29px] ${className}`}
     />
   );
 };
