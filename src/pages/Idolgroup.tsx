@@ -32,23 +32,26 @@ const Idolgroup = () => {
       <IdolgroupHeader group={group} location={location} />
       <RouteTransition location={location} direction={direction}>
         <main>
-          <IdolgroupComponent.Section id="home">
+          <IdolgroupComponent.Section
+            id="home"
+            className="px-[26px] lg:px-[118px]"
+          >
             <img
               src={group.logo}
               alt={`${group.name} logo`}
-              className="h-[47px] mb-[18px]"
+              className="h-[47px] lg:h-[157px] mb-[18px] lg:mb-[60px]"
             />
             <img
               src={group.mainPhoto}
               alt={`${group.name} mainPhoto`}
-              className="w-[359px] h-[237px] mb-2"
+              className="w-full mb-2 lg:mb-[30px]"
             />
-            <p className="text-center text-[14px] font-bold break-keep">
+            <p className="text-center text-[14px] lg:text-[30px] font-bold break-keep">
               {group.slogan}
             </p>
           </IdolgroupComponent.Section>
 
-          <IdolgroupComponent.Section id="members">
+          <IdolgroupComponent.Section id="members" className="px-[66px]">
             <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
             <IdolgroupComponent.Ul length={group.members.length}>
               {group.members.map((member, idx) => (

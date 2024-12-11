@@ -34,7 +34,9 @@ const RouteTransition = ({
         }}
         unmountOnExit
       >
-        <div ref={nodeRef}>{children}</div>
+        <div ref={nodeRef} className="w-full">
+          {children}
+        </div>
       </CSSTransition>
     </SwitchTransition>
   );

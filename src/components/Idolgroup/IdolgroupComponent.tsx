@@ -32,7 +32,7 @@ IdolgroupComponent.Section = ({
 }: ISectionProps) => {
   return (
     <section
-      className={`w-full flex flex-col items-center mb-[60px] ${className}`}
+      className={`w-full flex flex-col items-center mb-[60px] lg:mb-[206px] ${className}`}
       {...props}
     >
       {children}
