@@ -18,11 +18,7 @@ const IdolgroupMember = ({
   return (
     <li>
       <Link to={`${name}`} className="flex flex-col items-center mb-[22px]">
-        <img
-          src={img}
-          alt={`${name}`}
-          className="w-[108px] h-[108px] mb-[6px]"
-        />
+        <img src={img} alt={`${name}`} className="w-full mb-[6px]" />
         <p className="text-[14px] font-bold">{name}</p>
         <p className="text-[12px] font-medium mb-[3px]">{`${birth} (${age}세)`}</p>
         <div

@@ -32,7 +32,7 @@ IdolgroupComponent.Section = ({
 }: ISectionProps) => {
   return (
     <section
-      className={`w-full flex flex-col items-center mb-[60px] lg:mb-[206px] ${className}`}
+      className={`w-full flex flex-col items-center mb-[60px] lg:mb-[200px] ${className}`}
       {...props}
     >
       {children}
@@ -42,7 +42,9 @@ IdolgroupComponent.Section = ({
 
 IdolgroupComponent.H3 = ({ children, className }: IProps) => {
   return (
-    <h3 className={`text-4xl font-extrabold mb-[24px] ${className}`}>
+    <h3
+      className={`text-4xl font-extrabold mb-[24px] lg:mb-[200px] ${className}`}
+    >
       {children}
     </h3>
   );
@@ -55,8 +57,8 @@ interface IUlProps extends IProps {
 IdolgroupComponent.Ul = ({ children, className, length = 1 }: IUlProps) => {
   const getGridClass = () => {
     if (length === 1) return "grid grid-cols-1 justify-center";
-    if (length === 2) return "grid grid-cols-2 gap-x-[24px] gap-y-[58px]";
-    return "grid grid-cols-2 sm:grid-cols-3 gap-x-[24px] gap-y-[58px]";
+    if (length === 2) return "grid grid-cols-2 gap-x-[64px] gap-y-[58px]";
+    return "grid grid-cols-2 sm:grid-cols-3 gap-x-[64px] gap-y-[58px]";
   };
 
   return (

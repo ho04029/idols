@@ -51,7 +51,10 @@ const Idolgroup = () => {
             </p>
           </IdolgroupComponent.Section>
 
-          <IdolgroupComponent.Section id="members" className="px-[66px]">
+          <IdolgroupComponent.Section
+            id="members"
+            className="px-[66px] lg:px-[120px]"
+          >
             <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
             <IdolgroupComponent.Ul length={group.members.length}>
               {group.members.map((member, idx) => (
