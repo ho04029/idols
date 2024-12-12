@@ -9,7 +9,7 @@ const Layout = () => {
     <div className="flex justify-center font-['Loboto']">
       {isMenuOpen && <MenuBar />}
       <div
-        className={`w-full transition-all duration-300 ${
+        className={`w-full flex justify-center transition-all duration-300 ${
           isMenuOpen ? "overflow-hidden h-screen" : "overflow-auto"
         }`}
       >
