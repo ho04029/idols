@@ -5,7 +5,11 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
 
   return (
     <li className="flex flex-col items-center">
-      <img src={img} alt={title} className="w-[148px] h-[148px] mb-[10px]" />
+      <img
+        src={img}
+        alt={title}
+        className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px] mb-[10px]"
+      />
       {date.split(",").map((d, idx) => (
         <p key={idx} className="text-[14px] font-medium">
           {d.trim()}

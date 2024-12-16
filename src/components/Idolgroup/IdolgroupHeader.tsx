@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { NavLink, Link, Location } from "react-router-dom";
 
 import { useIdolGroupPageIndexStore } from "../../store/store";
@@ -46,7 +46,7 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
       className="w-full top-0 left-0 xl:mt-[51px] text-[14px] lg:text-[30px] font-bold z-10"
       style={{ backgroundColor: group.bgColor }}
     >
-      <div className="flex justify-between items-start lg:items-center pl-[50%] pr-[47px] lg:px-[120px] py-[28px] lg:py-[42px]">
+      <div className="flex justify-between items-start lg:items-center pl-[50%] pr-[30px] lg:px-[120px] py-[28px] lg:py-[42px]">
         <img
           src={`/images/icon_ddol.svg`}
           alt="MY IDOL"

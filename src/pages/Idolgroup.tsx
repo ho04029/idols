@@ -44,19 +44,19 @@ const Idolgroup = () => {
             <img
               src={group.mainPhoto}
               alt={`${group.name} mainPhoto`}
-              className="w-full mb-2 lg:mb-[30px]"
+              className="w-full max-w-[1043px] mb-2 lg:mb-[30px]"
             />
             <p className="text-center text-[14px] lg:text-[30px] font-bold break-keep">
               {group.slogan}
             </p>
           </IdolgroupComponent.Section>
 
-          <IdolgroupComponent.Section
-            id="members"
-            className="px-[66px] lg:px-[120px]"
-          >
+          <IdolgroupComponent.Section id="members">
             <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
-            <IdolgroupComponent.Ul length={group.members.length}>
+            <IdolgroupComponent.Ul
+              length={group.members.length}
+              className="max-w-[280px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[64px] lg:gap-x-[100px]"
+            >
               {group.members.map((member, idx) => (
                 <IdolgroupMember
                   key={idx}
