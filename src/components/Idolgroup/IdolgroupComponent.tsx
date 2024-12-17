@@ -62,8 +62,6 @@ IdolgroupComponent.Ul = ({ children, className, length = 1 }: IUlProps) => {
     return "grid grid-cols-2 sm:grid-cols-3 gap-y-[58px] lg:gap-y-[150px]";
   };
 
-  console.log(className);
-
   return <ul className={`${getGridClass()} ${className}`}>{children}</ul>;
 };
 
