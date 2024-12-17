@@ -11,7 +11,7 @@ const MenuBar = () => {
         className="text-[25px] lg:text-[35px] mt-[41px] lg:mt-[50px] mb-[29px] lg:mb-[45px] ml-[23px] lg:ml-[46px] text-black cursor-pointer"
       />
       <div className="flex flex-col items-center">
-        <SearchBox className="w-[253px] lg:w-[445px] h-[50px] lg:h-[88px] text-[16px] lg:text-[25px]" />
+        <SearchBox className="w-[253px] lg:w-[445px] h-[50px] lg:h-[88px] text-[16px] lg:text-[25px] lg:rounded-[30px]" />
       </div>
     </div>
   );
