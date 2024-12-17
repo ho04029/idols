@@ -12,9 +12,11 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
       />
       <p className="text-center text-[14px] lg:text-[30px] font-medium lg:font-semibold">
         {date.split(",").map((d, idx) => (
-          <span key={idx}>{d.trim()}</span>
+          <span key={idx}>
+            {d.trim()} <br />
+          </span>
         ))}
-        <br />
+
         {series}
       </p>
       <p className="text-[16px] lg:text-[35px] font-bold text-center leading-[18px] lg:leading-[35px]">
