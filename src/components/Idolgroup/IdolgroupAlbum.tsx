@@ -4,20 +4,30 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
   const { img, date, series, title, etc } = album;
 
   return (
-    <li className="flex flex-col items-center">
+    <li className="flex flex-col items-center gap-[10px] lg:gap-[30px]">
       <img
         src={img}
         alt={title}
-        className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px] mb-[10px]"
+        className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px]"
       />
-      {date.split(",").map((d, idx) => (
-        <p key={idx} className="text-[14px] font-medium">
-          {d.trim()}
-        </p>
-      ))}
-      <p className="text-[14px] font-medium mb-[10px]">{series}</p>
-      <p className="text-[16px] font-bold text-center">[{title}]</p>
-      {etc && <p className="text-[12px] font-medium">{etc}</p>}
+      <p className="text-center text-[14px] lg:text-[30px] font-medium lg:font-semibold">
+        {date.split(",").map((d) => (
+          <>{d.trim()}</>
+        ))}
+        <br />
+        {series}
+      </p>
+      <p className="text-[16px] lg:text-[35px] font-bold text-center leading-[18px] lg:leading-[35px]">
+        [{title}]
+        {etc && (
+          <>
+            <br />
+            <span className="text-[12px] lg:text-[25px] font-medium">
+              {etc}
+            </span>
+          </>
+        )}
+      </p>
     </li>
   );
 };

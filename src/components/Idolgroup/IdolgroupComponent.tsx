@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 
-import { IidolGroup, IAlbums } from "../../types/idol";
+import { IidolGroup, IAlbums, IidolMember } from "../../types/idol";
 import IdolgroupAlbum from "./IdolgroupAlbum";
+import IdolgroupMember from "./IdolgroupMember";
 
 interface IProps {
   children: ReactNode;
@@ -66,6 +67,35 @@ IdolgroupComponent.Ul = ({ children, className, length = 1 }: IUlProps) => {
   return <ul className={`${getGridClass()} ${className}`}>{children}</ul>;
 };
 
+interface IIdolgroupMembersProps {
+  members: IidolMember[];
+  memberConColor: string;
+  memberConTextColor: string;
+}
+
+IdolgroupComponent.Members = ({
+  members,
+  memberConColor,
+  memberConTextColor,
+}: IIdolgroupMembersProps) => (
+  <IdolgroupComponent.Section id="members">
+    <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
+    <IdolgroupComponent.Ul
+      length={members.length}
+      className="max-w-[280px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[64px] lg:gap-x-[100px]"
+    >
+      {members.map((member, idx) => (
+        <IdolgroupMember
+          key={idx}
+          member={member}
+          memberConColor={memberConColor}
+          memberConTextColor={memberConTextColor}
+        />
+      ))}
+    </IdolgroupComponent.Ul>
+  </IdolgroupComponent.Section>
+);
+
 interface IdolgroupAlbumsProps {
   albums: IAlbums;
   albumConBgColor: string;
@@ -86,10 +116,10 @@ IdolgroupComponent.Albums = ({
     {Object.keys(albums).map((category, idx) => (
       <section
         key={idx}
-        className="w-full flex flex-col items-center mb-[40px]"
+        className="w-full flex flex-col items-center mb-[40px] lg:mb-[208px]"
       >
         <div
-          className="max-w-fit text-[16px] font-semibold mb-[40px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] rounded-[5px]"
+          className="max-w-fit text-[16px] lg:text-[41px] font-semibold mb-[40px] lg:mb-[208px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] lg:px-[25px] lg:py-[8px] rounded-[5px] lg:rounded-[30px]"
           style={{
             backgroundColor: albumConBgColor,
             color: albumContextColor,

@@ -5,7 +5,6 @@ import { useIdolGroupPageIndexStore } from "../store/store";
 import { IdolGroups, groupList } from "../data/idolgroup";
 import { transitionDirectionCalculator } from "../utils/transitionDirectionCalculator";
 import RouteTransition from "../components/RouteTransition";
-import IdolgroupMember from "../components/Idolgroup/IdolgroupMember";
 import IdolgroupComponent from "../components/Idolgroup/IdolgroupComponent";
 import IdolgroupHeader from "../components/Idolgroup/IdolgroupHeader";
 
@@ -51,22 +50,11 @@ const Idolgroup = () => {
             </p>
           </IdolgroupComponent.Section>
 
-          <IdolgroupComponent.Section id="members">
-            <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
-            <IdolgroupComponent.Ul
-              length={group.members.length}
-              className="max-w-[280px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[64px] lg:gap-x-[100px]"
-            >
-              {group.members.map((member, idx) => (
-                <IdolgroupMember
-                  key={idx}
-                  member={member}
-                  memberConColor={group.memberConColor}
-                  memberConTextColor={group.memberConTextColor}
-                />
-              ))}
-            </IdolgroupComponent.Ul>
-          </IdolgroupComponent.Section>
+          <IdolgroupComponent.Members
+            members={group.members}
+            memberConColor={group.memberConColor}
+            memberConTextColor={group.memberConTextColor}
+          />
           <IdolgroupComponent.Albums
             albums={group.albums}
             albumConBgColor={group.albumconbgColor}
