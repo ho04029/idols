@@ -6,10 +6,10 @@ import MenuBar from "./MenuBar";
 const Layout = () => {
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   return (
-    <div className="flex justify-center font-['Loboto']">
+    <div className="w-full">
       {isMenuOpen && <MenuBar />}
       <div
-        className={`w-full flex justify-center transition-all duration-300 ${
+        className={`w-full flex justify-center font-['Loboto'] transition-all duration-300 ${
           isMenuOpen ? "overflow-hidden h-screen" : "overflow-auto"
         }`}
       >

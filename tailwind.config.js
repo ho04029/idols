@@ -20,6 +20,17 @@ module.exports = {
           "0%": { opacity: "1", transform: "translateX(0)" },
           "100%": { opacity: "0", transform: "translateX(100%)" },
         },
+        blinking: {
+          "0%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         fadeInRight: "fadeInRight 600ms ease-out forwards",
@@ -30,6 +41,7 @@ module.exports = {
           "fadeOutLeft 600ms ease-out forwards, fadeInRight 300ms ease-out forwards",
         fadeOutAndInLeft:
           "fadeOutRight 600ms ease-out forwards, fadeInLeft 300ms ease-out forwards",
+        blinking: "blinking 1s infinite",
       },
     },
   },

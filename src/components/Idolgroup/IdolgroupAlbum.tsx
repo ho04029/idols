@@ -11,8 +11,8 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
         className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px]"
       />
       <p className="text-center text-[14px] lg:text-[30px] font-medium lg:font-semibold">
-        {date.split(",").map((d) => (
-          <>{d.trim()}</>
+        {date.split(",").map((d, idx) => (
+          <span key={idx}>{d.trim()}</span>
         ))}
         <br />
         {series}
