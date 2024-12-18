@@ -41,7 +41,7 @@ const Slider = ({ slides }: { slides: string[] }) => {
   }
 
   return (
-    <div className="flex relative h-[314px]">
+    <div className="flex relative lg:w-[379px] h-[314px] lg:h-[554px]">
       {slides.map((slide, index) => {
         const isActive = index === current;
         const isLeftStack = index < current;
@@ -70,7 +70,7 @@ const Slider = ({ slides }: { slides: string[] }) => {
             onDragOver={(e) => e.preventDefault()}
             onTouchStart={eventStartHandler}
             onTouchEnd={eventEndHandler}
-            className={`w-[209px] h-[314px] flex absolute right-1/2 cursor-grab transition-transform duration-[2000ms] ease-in-out`}
+            className={`w-[209px] lg:w-[379px] h-[314px] lg:h-[554px] flex absolute right-1/2 cursor-grab transition-transform duration-[2000ms] ease-in-out`}
             style={{ zIndex, transform }}
           >
             <img src={slide} alt="" />

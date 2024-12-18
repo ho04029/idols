@@ -6,7 +6,7 @@ import MenuBar from "./MenuBar";
 const Layout = () => {
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   return (
-    <div className="w-full">
+    <>
       {isMenuOpen && <MenuBar />}
       <div
         className={`w-full flex justify-center font-['Loboto'] transition-all duration-300 ${
@@ -15,7 +15,7 @@ const Layout = () => {
       >
         <Outlet />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -44,7 +44,7 @@ IdolgroupComponent.Section = ({
 IdolgroupComponent.H3 = ({ children, className }: IProps) => {
   return (
     <h3
-      className={`text-4xl lg:text-5xl font-extrabold mb-[24px] lg:mb-[200px] ${className}`}
+      className={`text-4xl lg:text-5xl font-extrabold mb-[60px] lg:mb-[200px] ${className}`}
     >
       {children}
     </h3>
