@@ -5,7 +5,7 @@ import { ageCalculator } from "../utils/ageCalculator";
 import { memberSpecifics } from "../data/memberSpecific";
 import Slider from "../components/Slider";
 import HamburgerMenu from "../components/HamburgerMenu";
-import { IoIosArrowBack } from "react-icons/io";
+import BackIcon from "../components/BackIcon";
 
 export const SpecificList = ({
   title,
@@ -74,12 +74,12 @@ const IdolMemberSpecific = () => {
       className="w-full overflow-hidden"
       style={{ backgroundColor: bgColor, color: txtColor }}
     >
-      <header className="flex items-center justify-around pt-[33px] pb-[22px]">
-        <IoIosArrowBack className="text-[20px] lg:text-[29px]" />
+      <header className="flex items-center justify-around pt-[33px] lg:pt-[40px] pb-[22px] lg:pb-[43px]">
+        <BackIcon />
         <img src={logo} alt={`${member.groupName}_logo`} className="h-[53px]" />
         <HamburgerMenu />
       </header>
-      <section className="lg:flex lg:justify-center lg:items-center lg:gap-[45px]">
+      <section className="lg:flex lg:justify-center lg:items-center lg:gap-[50px]">
         <div className="mt-[34px]">
           <Slider slides={member.imgs} />
           <div className="flex items-center justify-center text-center flex-col text-xl lg:text-[40px] font-bold mt-[10px] lg:mt-[40px] mb-[31.35px]">

@@ -1,15 +1,12 @@
-import React from "react";
-
 import { useMenuStore } from "../store/store";
+import { IoMenuOutline } from "react-icons/io5";
 
 const HamburgerMenu = ({ className }: { className?: string }) => {
   const openMenuHandler = useMenuStore((state) => state.openMenuHandler);
   return (
-    <img
-      src={`/images/icon_hamburger.svg`}
-      alt="menu"
+    <IoMenuOutline
       onClick={openMenuHandler}
-      className={`cursor-pointer w-[20px] lg:w-[29px] ${className}`}
+      className={`cursor-pointer text-[20px] lg:text-[35px] ${className}`}
     />
   );
 };
