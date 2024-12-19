@@ -11,6 +11,7 @@ export interface IAlbum {
   title: string;
   etc?: string;
   img: string;
+  youtubeLink: string;
 }
 
 export interface IAlbumsStrict {
