@@ -47,6 +47,7 @@ export interface IidolGroups {
   [groupName: string]: IidolGroup;
 }
 
+//멤버 프로필
 export interface IMemberSpecific {
   name: string | string[];
   englishName: string;
@@ -82,4 +83,18 @@ export interface IMemberSpecificGroup extends IMemberSpecificPageInfo {
 
 export interface IMemberSpecificGroups {
   [groupName: string]: IMemberSpecificGroup;
+}
+
+//앨범 판매량
+interface IAlbumInfo {
+  img: string;
+  albumSalesData: number[];
+}
+
+interface IGroupAlbumData {
+  [albumName: string]: IAlbumInfo;
+}
+
+export interface IAlbumSales {
+  [groupName: string]: IGroupAlbumData;
 }

@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 import Layout from "./components/Layout";
+import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Idolgroup from "./pages/Idolgroup";
 import IdolMemberSpecific from "./pages/IdolMemberSpecific";
-import NotFound from "./pages/NotFound";
+import AlbumChart from "./pages/AlbumChart";
 
 const routerData: RouteObject[] = [
   {
@@ -20,6 +21,10 @@ const routerData: RouteObject[] = [
       {
         path: "/idolgroup/:groupName/:memberName",
         element: <IdolMemberSpecific />,
+      },
+      {
+        path: "/chart/:groupName",
+        element: <AlbumChart />,
       },
     ],
   },
