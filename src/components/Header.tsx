@@ -10,7 +10,9 @@ const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  const groupName = location.pathname.split("/")[2];
+  const pathName = location.pathname.split("/");
+  const curPage = pathName[1];
+  const groupName = pathName[2];
   const group = IdolGroups[groupName];
 
   const { activeIndex, setActiveIndex, setPrevIndex } =
@@ -30,16 +32,13 @@ const Header = () => {
         />
         <HamburgerMenu className={`text-[${group.textColor}]`} />
       </div>
-      <nav
-        className="w-full flex justify-around xl:gap-[10%] pb-[24px] lg:pb-[76px] lg:px-[120px]"
-        style={{ borderBottom: `2px solid ${group.textColor}` }}
-      >
+      <nav className="w-full flex justify-around xl:gap-[10%] pb-[24px] lg:pb-[76px] lg:px-[120px]">
         <ul className="w-full flex justify-around lg:justify-start items-center lg:gap-[40px]">
           {groupList.map((navGroupName, idx) => {
             return (
               <NavLink
                 key={idx}
-                to={`/idolgroup/${navGroupName}`}
+                to={`/${curPage}/${navGroupName}`}
                 onClick={() => {
                   setPrevIndex(activeIndex);
                   setActiveIndex(idx);
