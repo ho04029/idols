@@ -12,7 +12,7 @@ const SearchBox = ({ className }: { className?: string }) => {
       <input
         type="text"
         placeholder="Search"
-        className="w-full h-full pl-[10px] py-[17px] bg-transparent  border-l-2"
+        className="w-full h-full pl-[10px] py-[17px] bg-transparent  border-l-2 focus:outline-none"
       />
     </div>
   );
