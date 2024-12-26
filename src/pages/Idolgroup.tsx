@@ -28,7 +28,11 @@ const Idolgroup = () => {
 
   return (
     <IdolgroupComponent group={group}>
-      <IdolgroupHeader group={group} location={location} />
+      <IdolgroupHeader
+        group={group}
+        location={location}
+        groupName={groupName}
+      />
       <RouteTransition location={location} direction={direction}>
         <main>
           <IdolgroupComponent.Section

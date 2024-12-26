@@ -5,7 +5,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Idolgroup from "./pages/Idolgroup";
 import IdolMemberSpecific from "./pages/IdolMemberSpecific";
-import AlbumChart from "./pages/AlbumChart";
+import SalesGraph from "./pages/SalesGraph";
 
 const routerData: RouteObject[] = [
   {
@@ -23,8 +23,8 @@ const routerData: RouteObject[] = [
         element: <IdolMemberSpecific />,
       },
       {
-        path: "/chart/:groupName",
-        element: <AlbumChart />,
+        path: "/graph/:groupName",
+        element: <SalesGraph />,
       },
     ],
   },

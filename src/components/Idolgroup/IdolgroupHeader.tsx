@@ -7,9 +7,10 @@ import Header from "../Header";
 interface IIdolgroupHeader {
   group: IidolGroup;
   location: Location;
+  groupName: string;
 }
 
-const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
+const IdolgroupHeader = ({ group, location, groupName }: IIdolgroupHeader) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const sectionLinks = [
     { id: "home", label: "HOME" },
@@ -45,6 +46,9 @@ const IdolgroupHeader = ({ group, location }: IIdolgroupHeader) => {
             {section.label}
           </Link>
         ))}
+        <Link to={`/graph/${groupName}`} className="cursor-pointer">
+          SALES GRAPH
+        </Link>
       </nav>
     </>
   );
