@@ -89,6 +89,7 @@ export interface IMemberSpecificGroups {
 interface IAlbumInfo {
   img: string;
   albumSalesData: number[];
+  mainColor: string;
 }
 
 interface IGroupAlbumData {
