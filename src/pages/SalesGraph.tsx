@@ -47,11 +47,20 @@ const SalesGraph = () => {
       x: {
         grid: {
           display: false,
+          color: group.textColor,
+          borderWidth: 1,
+        },
+        ticks: {
+          color: group.textColor, //폰트컬러
         },
       },
       y: {
+        grid: {
+          color: group.textColor,
+        },
         ticks: {
           maxTicksLimit: 4, // Y축 라벨을 최대 6개로 제한
+          color: group.textColor, //폰트컬러
         },
       },
     },
