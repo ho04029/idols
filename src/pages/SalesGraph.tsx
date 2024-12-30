@@ -43,6 +43,9 @@ const SalesGraph = () => {
     interaction: {
       intersect: false,
     },
+    defaults: {
+      borderColor: "#ffffff",
+    },
     scales: {
       x: {
         grid: {
@@ -152,7 +155,7 @@ const SalesGraph = () => {
           <Line options={options} data={data} />
         </section>
         <section>
-          <ul className="grid grid-cols-3 gap-y-[30px]">
+          <ul className="grid grid-cols-3 lg:grid-cols-4 gap-x-[42px] lg:gap-x-[135px] gap-y-[30px] lg:gap-y-[43px]">
             {Object.keys(albumDataSet).map((title, idx) => (
               <li
                 key={idx}
@@ -160,7 +163,9 @@ const SalesGraph = () => {
                 className="flex flex-col items-center gap-[15px] cursor-pointer"
               >
                 <img src={albumDataSet[title].img} alt={title} />
-                <p className="text-center font-bold text-[16px]">{title}</p>
+                <p className="text-center font-bold text-[16px] lg:text-[20px] leading-[10px]">
+                  {title}
+                </p>
               </li>
             ))}
           </ul>
