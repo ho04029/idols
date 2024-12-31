@@ -112,41 +112,36 @@ export const albumSales: IAlbumSales = {
     "Get A Guitar": {
       img: "https://i.ibb.co/tLsQ09C/riize-get-a-guitar.png",
       albumSalesData: [178200, 488700, 566900, 692100, 788400, 788900, 1016800],
-      mainColor: "",
+      mainColor: "#8E3120",
     },
     RIIZING: {
       img: "https://i.ibb.co/VYYwSYT/riize-riizing.png",
       albumSalesData: [
         661700, 679700, 685500, 1002800, 1073100, 1076600, 1255000,
       ],
-      mainColor: "",
+      mainColor: "#5293EA",
     },
     "RIIZING : Epilogue": {
       img: "https://i.ibb.co/G3LgdZQ/riize-riizing-epilogue.png",
       albumSalesData: [128000, 138600, 150700, 161500, 165900, 167200, 273600],
-      mainColor: "",
+      mainColor: "#BD6A41 ",
     },
   },
   NCTWISH: {
     WISH: {
       img: "https://i.ibb.co/jhHwqTw/nctwish-wish.png",
       albumSalesData: [92700, 192100, 207500, 222900, 233200, 233300, 280400],
-      mainColor: "",
+      mainColor: "#E5F400",
     },
     Songbird: {
       img: "https://i.ibb.co/VWzjhGT/nctwish-songbird.png",
       albumSalesData: [270600, 386300, 388300, 447100, 475800, 514700, 537900],
-      mainColor: "",
+      mainColor: "#3D98DB",
     },
     Steady: {
       img: "https://i.ibb.co/xfQc1WH/nctwish-steady.png",
       albumSalesData: [213400, 321700, 337200, 618800, 621400, 625000, 792300],
-      mainColor: "",
-    },
-    WISHFUL: {
-      img: "https://i.ibb.co/S3jvDMv/nctwish-wishful.png",
-      albumSalesData: [],
-      mainColor: "",
+      mainColor: "#AA0423",
     },
   },
 };
