@@ -43,15 +43,20 @@ const SalesGraph = () => {
     interaction: {
       intersect: false,
     },
-    defaults: {
-      borderColor: "#ffffff",
-    },
     scales: {
       x: {
         grid: {
-          display: false,
-          color: group.textColor,
-          borderWidth: 1,
+          display: true,
+          color: [
+            group.textColor,
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+          ],
+          drawTicks: false,
         },
         ticks: {
           color: group.textColor, //폰트컬러
@@ -60,6 +65,7 @@ const SalesGraph = () => {
       y: {
         grid: {
           color: group.textColor,
+          drawTicks: false, //축 뒤로 선 빠져나오는 거
         },
         ticks: {
           maxTicksLimit: 4, // Y축 라벨을 최대 6개로 제한
