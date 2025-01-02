@@ -23,7 +23,7 @@ export const albumSales: IAlbumSales = {
       mainColor: "#5093C7",
     },
     DREAMLIKE: {
-      img: "https://i.ibb.co/kJqKW7p/theboyz-dream-Like.png",
+      img: "https://i.ibb.co/bKCDcmm/theboyz-dream-Like.png",
       albumSalesData: [5300, 7000, 8000, 10000, 17500, 22100, 26200],
       mainColor: "#9EFAFF",
     },
@@ -33,7 +33,7 @@ export const albumSales: IAlbumSales = {
       mainColor: "#840D13",
     },
     CHASE: {
-      img: "https://i.ibb.co/7Y0QRpQ/theboyz-chase.png",
+      img: "https://i.ibb.co/7jYRSKk/theboyz-chase.png",
       albumSalesData: [64600, 95600, 113500, 170800, 197600, 210300, 212600],
       mainColor: "#AF0009",
     },

@@ -134,14 +134,14 @@ export const IdolGroups: IidolGroups = {
           date: "2019. 08. 19",
           series: "4th MINI ALBUM",
           title: "DREAMLIKE",
-          img: "https://i.ibb.co/kJqKW7p/theboyz-dream-Like.png",
+          img: "https://i.ibb.co/bKCDcmm/theboyz-dream-Like.png",
           youtubeLink: "https://www.youtube.com/watch?v=bTTczRe-Pj0",
         },
         {
           date: "2020. 09. 21",
           series: "5th MINI ALBUM",
           title: "CHASE",
-          img: "https://i.ibb.co/7Y0QRpQ/theboyz-chase.png",
+          img: "https://i.ibb.co/7jYRSKk/theboyz-chase.png",
           youtubeLink: "https://www.youtube.com/watch?v=c_e-IC0VwZM",
         },
         {
