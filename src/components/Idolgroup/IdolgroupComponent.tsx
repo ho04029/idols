@@ -58,8 +58,8 @@ interface IUlProps extends IProps {
 IdolgroupComponent.Ul = ({ children, className, length = 1 }: IUlProps) => {
   const getGridClass = () => {
     if (length === 1) return "grid grid-cols-1 justify-center";
-    if (length === 2) return "grid grid-cols-2 gap-y-[58px]";
-    return "grid grid-cols-2 sm:grid-cols-3 gap-y-[58px] lg:gap-y-[150px]";
+    if (length === 2) return "grid grid-cols-2 gap-y-[30px]";
+    return "grid grid-cols-2 sm:grid-cols-3 gap-y-[30px] lg:gap-y-[150px]";
   };
 
   return <ul className={`${getGridClass()} ${className}`}>{children}</ul>;
@@ -80,7 +80,7 @@ IdolgroupComponent.Members = ({
     <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
     <IdolgroupComponent.Ul
       length={members.length}
-      className="max-w-[280px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[64px] lg:gap-x-[100px]"
+      className="max-w-[300px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[50px] lg:gap-x-[100px]"
     >
       {members.map((member, idx) => (
         <IdolgroupMember

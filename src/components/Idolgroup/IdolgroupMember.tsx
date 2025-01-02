@@ -23,12 +23,12 @@ const IdolgroupMember = ({
           alt={`${name}`}
           className="w-full mb-[6px] lg:mb-[30px]"
         />
-        <p className="lg:mb-[20px] text-[14px] lg:text-[35px] font-bold">
+        <p className="lg:mb-[20px] text-[16px] lg:text-[35px] font-bold">
           {name}
         </p>
-        <p className="lg:mb-[20px] text-[12px] lg:text-[30px] font-medium mb-[3px]">{`${birth} (${age}세)`}</p>
+        <p className="lg:mb-[20px] text-[14px] lg:text-[30px] font-medium mb-[3px]">{`${birth} (${age}세)`}</p>
         <div
-          className="text-[8px] lg:text-[30px] font-medium px-[7px] py-[1px] rounded-[5px] lg:rounded-[28px]"
+          className="text-[12px] lg:text-[30px] font-medium px-[7px] py-[1px] rounded-[5px] lg:rounded-[28px] break-keep text-center"
           style={{ backgroundColor: memberConColor, color: memberConTextColor }}
         >
           <p>{role}</p>

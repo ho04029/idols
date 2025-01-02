@@ -46,13 +46,15 @@ const SalesGraph = () => {
       intersect: true,
     },
     maintainAspectRatio: false, //부모사이즈에 맞춰 반응
+    responsive: true,
     scales: {
       x: {
         grid: {
           display: true,
           color: (ctx) =>
             ctx.tick.value === 0 ? group.textColor : "transparent",
-          drawTicks: false,
+          drawTicks: true,
+          tickLength: 2,
           lineWidth: (ctx) => {
             if (windowWidth < 1024) {
               return ctx.tick.value === 0 ? 2 : 1;
@@ -71,7 +73,8 @@ const SalesGraph = () => {
       y: {
         grid: {
           color: group.textColor,
-          drawTicks: false, //축 뒤로 선 빠져나오는 거
+          drawTicks: true, //축 뒤로 선 빠져나오는 거
+          tickLength: 2, //축 뒤로 선 얼마나 빠져나올지
           lineWidth: (ctx) => {
             if (windowWidth < 1024) {
               return ctx.tick.value === 0 ? 2 : 1;
@@ -177,7 +180,7 @@ const SalesGraph = () => {
                   style={{ backgroundColor: data.borderColor }}
                   className="w-[10px] h-[10px] lg:w-[20px] lg:h-[20px] rounded-full"
                 ></div>
-                <p className="font-bold text-[14px] lg:text-[20px]">
+                <p className="font-bold text-[14px] lg:text-[16px]">
                   {data.label}
                 </p>
               </li>
@@ -196,7 +199,7 @@ const SalesGraph = () => {
                 className="flex flex-col items-center gap-[15px] cursor-pointer"
               >
                 <img src={albumDataSet[title].img} alt={title} />
-                <p className="text-center font-bold text-[16px] lg:text-[20px]">
+                <p className="text-center font-bold text-[14px] lg:text-[16px] leading-[18px]">
                   {title}
                 </p>
               </li>
