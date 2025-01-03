@@ -54,7 +54,7 @@ const SalesGraph = () => {
           color: (ctx) =>
             ctx.tick.value === 0 ? group.textColor : "transparent",
           drawTicks: true,
-          tickLength: 2,
+          tickLength: 1,
           lineWidth: (ctx) => {
             if (windowWidth < 1024) {
               return ctx.tick.value === 0 ? 2 : 1;
@@ -74,7 +74,7 @@ const SalesGraph = () => {
         grid: {
           color: group.textColor,
           drawTicks: true, //축 뒤로 선 빠져나오는 거
-          tickLength: 2, //축 뒤로 선 얼마나 빠져나올지
+          tickLength: 1, //축 뒤로 선 얼마나 빠져나올지
           lineWidth: (ctx) => {
             if (windowWidth < 1024) {
               return ctx.tick.value === 0 ? 2 : 1;
@@ -162,7 +162,7 @@ const SalesGraph = () => {
 
   return (
     <div
-      className="w-full min-h-screen flex flex-col items-center"
+      className="w-full min-h-screen flex flex-col items-center pb-[150px]"
       style={{ backgroundColor: group.bgColor, color: group.textColor }}
     >
       <Header />

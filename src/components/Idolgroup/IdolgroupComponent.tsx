@@ -80,7 +80,7 @@ IdolgroupComponent.Members = ({
     <IdolgroupComponent.H3>MEMBERS</IdolgroupComponent.H3>
     <IdolgroupComponent.Ul
       length={members.length}
-      className="max-w-[300px] sm:max-w-[452px] lg:max-w-[1040px] gap-x-[50px] lg:gap-x-[100px]"
+      className="max-w-[300px] sm:max-w-[650px] lg:max-w-[1040px] gap-x-[50px] lg:gap-x-[100px]"
     >
       {members.map((member, idx) => (
         <IdolgroupMember

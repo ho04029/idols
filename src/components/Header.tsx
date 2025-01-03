@@ -36,7 +36,7 @@ const Header = () => {
         <img
           src={`/images/icon_ddol.svg`}
           alt="MY IDOL"
-          className="w-[22px] lg:w-[54px]"
+          className="w-[22px] lg:w-[54px] cursor-pointer"
         />
         <HamburgerMenu className={`text-[${group.textColor}]`} />
       </div>

@@ -842,7 +842,7 @@ export const memberSpecifics: IMemberSpecificGroups = {
         symbolNumber: "39",
       },
     },
-    bgColor: "#FEACE5",
+    bgColor: "#B5E1FD",
     txtColor: "#000000",
     logo: "https://i.ibb.co/GHFSF8j/nctwish-logo.png",
   },
