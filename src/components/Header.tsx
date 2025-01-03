@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="w-full top-0 left-0 xl:mt-[51px] text-[14px] lg:text-[30px] font-bold"
+      className="w-full top-0 left-0 xl:mt-[51px] text-[14px] lg:text-[25px] xl:text-[30px] font-bold"
       style={{ backgroundColor: group.bgColor }}
     >
       <div
@@ -70,7 +70,7 @@ const Header = () => {
             );
           })}
         </ul>
-        <SearchBox className="w-0 lg:w-[190px] lg:h-[50px] invisible lg:visible lg:bg-white lg:text-black lg:text-[16px] lg:border-none" />
+        <SearchBox className="w-0 h-0 lg:w-[15%] lg:max-w-[190px] lg:h-[50px] invisible lg:visible lg:bg-white lg:text-black lg:text-[16px] lg:border-none" />
       </nav>
     </header>
   );

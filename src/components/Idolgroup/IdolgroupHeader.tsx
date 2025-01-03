@@ -39,7 +39,7 @@ const IdolgroupHeader = ({ group, location, groupName }: IIdolgroupHeader) => {
       <Header />
       <nav
         style={{ borderTop: `2px solid ${group.textColor}` }}
-        className="w-full flex justify-center lg:justify-start items-center pt-[23px] lg:pt-[62px] pb-[40px] lg:px-[120px] gap-[18px] lg:gap-[40px] text-[14px] lg:text-[30px] font-bold"
+        className="w-full flex justify-center lg:justify-start items-center pt-[23px] lg:pt-[62px] pb-[40px] lg:px-[120px] gap-[18px] lg:gap-[40px] text-[14px] lg:text-[25px] xl:text-[30px] font-bold"
       >
         {sectionLinks.map((section, idx) => (
           <Link key={idx} to={`#${section.id}`} className="cursor-pointer">

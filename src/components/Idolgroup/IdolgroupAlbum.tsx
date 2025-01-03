@@ -8,14 +8,14 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
       <a
         target="blank"
         href={youtubeLink}
-        className="flex flex-col items-center gap-[10px] lg:gap-[30px]"
+        className="flex flex-col items-center"
       >
         <img
           src={img}
           alt={title}
-          className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px]"
+          className="w-[148px] lg:w-[280px] h-[148px] lg:h-[280px] mb-[10px] lg:mb-[25px]"
         />
-        <p className="text-center text-[14px] lg:text-[30px] font-medium lg:font-semibold">
+        <p className="mb-[10px] lg:mb-[15px] text-center text-[14px] lg:text-[25px] font-medium lg:font-semibold lg:leading-[30px]">
           {date.split(",").map((d, idx) => (
             <span key={idx}>
               {d.trim()} <br />
@@ -24,7 +24,7 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
 
           {series}
         </p>
-        <p className="text-[16px] lg:text-[35px] font-bold text-center leading-[18px] lg:leading-[35px]">
+        <p className="text-[16px] lg:text-[30px] font-bold text-center leading-[18px] lg:leading-[30px]">
           [{title}]
           {etc && (
             <>
