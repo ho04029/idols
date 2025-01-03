@@ -16,10 +16,10 @@ export const SpecificList = ({
 }) => {
   return (
     <li className={`flex items-start mb-[20px] lg:mb-[30px]`}>
-      <span className="font-bold text-[16px] lg:text-[30px] mr-[15px] break-keep">
+      <span className="font-bold text-[16px] lg:text-[25px] mr-[15px] lg:mr-[25px] break-keep">
         {title}
       </span>
-      <p className="text-[14px] lg:text-[25px]">
+      <p className="text-[14px] lg:text-[20px] lg:leading-[30px]">
         {Array.isArray(des)
           ? des.map((item, index) => (
               <span key={index} className="block break-keep">
@@ -71,7 +71,7 @@ const IdolMemberSpecific = () => {
 
   return (
     <div
-      className="w-full overflow-hidden"
+      className="w-full overflow-hidden lg:pb-[100px]"
       style={{ backgroundColor: bgColor, color: txtColor }}
     >
       <header className="flex items-center justify-around pt-[33px] lg:pt-[40px] pb-[22px] lg:pb-[43px]">
@@ -79,12 +79,12 @@ const IdolMemberSpecific = () => {
         <img src={logo} alt={`${member.groupName}_logo`} className="h-[53px]" />
         <HamburgerMenu />
       </header>
-      <section className="lg:flex lg:justify-center lg:items-center lg:gap-[50px]">
+      <section className="flex flex-col items-center">
         <div className="mt-[34px]">
           <Slider slides={member.imgs} />
-          <div className="flex items-center justify-center text-center flex-col text-xl lg:text-[40px] font-bold mt-[10px] lg:mt-[40px] mb-[31.35px]">
-            <p className="mb-[5px] lg:mb-[10px ]">{memberName}</p>
-            <p className="text-[16px] lg:text-[35px]">{member.englishName}</p>
+          <div className="flex items-center justify-center gap-[5px] lg:gap-[3px]  text-center flex-col font-bold mt-[10px] lg:mt-[65px] mb-[31.35px] lg:mb-[63px]">
+            <p className="text-xl lg:text-[35px]">{memberName}</p>
+            <p className="text-[16px] lg:text-[30px]">{member.englishName}</p>
           </div>
         </div>
 
