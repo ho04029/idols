@@ -15,7 +15,7 @@ export const SpecificList = ({
   des: string | string[];
 }) => {
   return (
-    <li className={`flex items-start mb-[20px] lg:mb-[30px]`}>
+    <li className={`flex items-start mb-[20px] lg:mb-[25px]`}>
       <span className="font-bold text-[16px] lg:text-[25px] mr-[15px] lg:mr-[25px] break-keep">
         {title}
       </span>
@@ -82,9 +82,9 @@ const IdolMemberSpecific = () => {
       <section className="flex flex-col items-center">
         <div className="mt-[34px]">
           <Slider slides={member.imgs} />
-          <div className="flex items-center justify-center gap-[5px] lg:gap-[3px]  text-center flex-col font-bold mt-[10px] lg:mt-[65px] mb-[31.35px] lg:mb-[63px]">
-            <p className="text-xl lg:text-[35px]">{memberName}</p>
-            <p className="text-[16px] lg:text-[30px]">{member.englishName}</p>
+          <div className="flex items-center justify-center gap-[5px] lg:gap-[10px]  text-center flex-col font-bold mt-[15px] lg:mt-[65px] mb-[30px] lg:mb-[50px]">
+            <p className="text-xl lg:text-[30px]">{memberName}</p>
+            <p className="text-[16px] lg:text-[25px]">{member.englishName}</p>
           </div>
         </div>
 

@@ -629,11 +629,7 @@ export const memberSpecifics: IMemberSpecificGroups = {
           "https://i.ibb.co/5rKTh1k/riize-wb-slide2.png",
           "https://i.ibb.co/RSLFwr0/riize-wb-slide3.png",
         ],
-        birth: [
-          "2002년 3월 2일 (22세)",
-          "서울특별시 성북구",
-          "울산광역시 울주군 범서읍",
-        ],
+        birth: ["2002년 3월 2일 (22세)", "서울특별시 성북구"],
         nationality: "대한민국",
         physical: "176cm | 59kg | AB형 | 270mm",
         familys: ["아버지 박광훈, 어머니, 형(2000년생)"],
