@@ -1,12 +1,16 @@
 import { useState, useRef } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Slider = ({ slides }: { slides: string[] }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+  let prevSlide = current === 0 ? length - 1 : current - 1;
+  let nextSlide = current === length - 1 ? 0 : current + 1;
   const startX = useRef<number | null>(null); // 드래그 시작 X 좌표
 
-  const canSlideNext = current < length - 1;
-  const canSlidePrev = current > 0;
+  //다음 슬라이드와 이전 슬라이드를 구하는 핼퍼함수
+  const getNextSlide = () => (current === length - 1 ? 0 : current + 1);
+  const getPrevSlide = () => (current === 0 ? length - 1 : current - 1);
 
   const handleStart = (x: number) => {
     startX.current = x; // 시작 위치 저장
@@ -17,10 +21,10 @@ const Slider = ({ slides }: { slides: string[] }) => {
 
     const deltaX = startX.current - x;
 
-    if (deltaX > 50 && canSlideNext) {
-      setCurrent((prev) => prev + 1); // 오른쪽 → 왼쪽 드래그
-    } else if (deltaX < -50 && canSlidePrev) {
-      setCurrent((prev) => prev - 1); // 왼쪽 → 오른쪽 드래그
+    if (deltaX > 50) {
+      setCurrent(getNextSlide()); // 오른쪽 → 왼쪽 드래그
+    } else if (deltaX < -50) {
+      setCurrent(getPrevSlide); // 왼쪽 → 오른쪽 드래그
     }
 
     startX.current = null; // 초기화
@@ -41,19 +45,23 @@ const Slider = ({ slides }: { slides: string[] }) => {
   }
 
   return (
-    <div className="flex relative lg:w-[379px] h-[314px] lg:h-[554px]">
+    <div className="flex justify-around items-center relative w-full h-[314px] lg:h-[627px]">
+      <IoIosArrowBack
+        onClick={() => setCurrent(getPrevSlide())}
+        className="-translate-x-[409px] text-[40px] cursor-pointer"
+      />
       {slides.map((slide, index) => {
         const isActive = index === current;
-        const isLeftStack = index < current;
-        const isRightStack = index > current;
+        const isNext = index === nextSlide;
+        const isPrev = index === prevSlide;
 
-        const zIndex = isActive
-          ? 10
-          : isLeftStack
-          ? 10 - (current - index)
-          : isRightStack
-          ? 10 - (index - current)
-          : "";
+        // const zIndex = isActive
+        //   ? 10
+        //   : isLeftStack
+        //   ? 10 - (current - index)
+        //   : isRightStack
+        //   ? 10 - (index - current)
+        //   : "";
 
         const transform = isActive
           ? "translateX(50%)"
@@ -70,13 +78,25 @@ const Slider = ({ slides }: { slides: string[] }) => {
             onDragOver={(e) => e.preventDefault()}
             onTouchStart={eventStartHandler}
             onTouchEnd={eventEndHandler}
-            className={`w-[209px] lg:w-[379px] h-[314px] lg:h-[554px] flex absolute right-1/2 cursor-grab transition-transform duration-[2000ms] ease-in-out`}
-            style={{ zIndex, transform }}
+            className={`flex w-[209px] lg:w-[425px] h-[314px] lg:h-[627px] transition-transform duration-[2000ms] ease-in-out absolute ${
+              isActive
+                ? "translate-y-[-12px] lg:translate-y-[-24px] z-10"
+                : isNext
+                ? "translate-x-[65px] lg:translate-x-[120px]"
+                : isPrev
+                ? "-translate-x-[65px] lg:-translate-x-[120px]"
+                : "hidden"
+            }`}
+            // style={{ zIndex, transform }}
           >
             <img src={slide} alt="" />
           </div>
         );
       })}
+      <IoIosArrowForward
+        onClick={() => setCurrent(getNextSlide())}
+        className="translate-x-[409px] text-[40px] cursor-pointer"
+      />
     </div>
   );
 };
