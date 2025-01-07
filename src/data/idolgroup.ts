@@ -189,7 +189,7 @@ export const IdolGroups: IidolGroups = {
           youtubeLink: "https://www.youtube.com/watch?v=UFlaP2_j2eA",
         },
         {
-          date: "2021. 11. 11",
+          date: "2021. 11. 01",
           series: "3rd SINGLE ALBUM",
           title: "MAVERICK",
           img: "https://i.ibb.co/k3t8r3n/theboyz-maverick.png",

@@ -1,6 +1,6 @@
 # MY IDOL
 
-- <https://idolgroup.vercel.app/>
+- <https://myidol.vercel.app/>
 
 ---
 
