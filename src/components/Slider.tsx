@@ -48,26 +48,12 @@ const Slider = ({ slides }: { slides: string[] }) => {
     <div className="flex justify-around items-center relative w-full h-[314px] lg:h-[627px]">
       <IoIosArrowBack
         onClick={() => setCurrent(getPrevSlide())}
-        className="-translate-x-[409px] text-[40px] cursor-pointer"
+        className="hidden lg:visible -translate-x-[409px] text-[40px] cursor-pointer"
       />
       {slides.map((slide, index) => {
         const isActive = index === current;
         const isNext = index === nextSlide;
         const isPrev = index === prevSlide;
-
-        // const zIndex = isActive
-        //   ? 10
-        //   : isLeftStack
-        //   ? 10 - (current - index)
-        //   : isRightStack
-        //   ? 10 - (index - current)
-        //   : "";
-
-        const transform = isActive
-          ? "translateX(50%)"
-          : `translateX(calc(50% + ${index - current} * 10px)) rotate(${
-              (index - current) * 2
-            }deg)`;
 
         return (
           <div
@@ -87,7 +73,6 @@ const Slider = ({ slides }: { slides: string[] }) => {
                 ? "-translate-x-[65px] lg:-translate-x-[120px]"
                 : "hidden"
             }`}
-            // style={{ zIndex, transform }}
           >
             <img src={slide} alt="" />
           </div>
@@ -95,7 +80,7 @@ const Slider = ({ slides }: { slides: string[] }) => {
       })}
       <IoIosArrowForward
         onClick={() => setCurrent(getNextSlide())}
-        className="translate-x-[409px] text-[40px] cursor-pointer"
+        className="hidden lg:visible translate-x-[409px] text-[40px] cursor-pointer"
       />
     </div>
   );
