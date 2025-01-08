@@ -48,7 +48,7 @@ const Slider = ({ slides }: { slides: string[] }) => {
     <div className="flex justify-around items-center relative w-full h-[314px] lg:h-[627px]">
       <IoIosArrowBack
         onClick={() => setCurrent(getPrevSlide())}
-        className="hidden lg:visible -translate-x-[409px] text-[40px] cursor-pointer"
+        className="invisible lg:visible -translate-x-[409px] text-[40px] cursor-pointer"
       />
       {slides.map((slide, index) => {
         const isActive = index === current;
@@ -80,7 +80,7 @@ const Slider = ({ slides }: { slides: string[] }) => {
       })}
       <IoIosArrowForward
         onClick={() => setCurrent(getNextSlide())}
-        className="hidden lg:visible translate-x-[409px] text-[40px] cursor-pointer"
+        className="invisible lg:visible translate-x-[409px] text-[40px] cursor-pointer"
       />
     </div>
   );
