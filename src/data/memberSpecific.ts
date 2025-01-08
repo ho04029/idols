@@ -33,9 +33,9 @@ export const memberSpecifics: IMemberSpecificGroups = {
         name: ["Jacob Bae (제이콥 배)", "배준영 (裵俊英, Bae Junyung)"],
         englishName: "Jacob Bae",
         imgs: [
+          "https://i.ibb.co/C9gQt1h/theboyz-jacob-slide1.png",
           "https://i.ibb.co/ypxPQM3/theboyz-jacob-slide2.png",
           "https://i.ibb.co/qRwn6yg/theboyz-jacob-slide3.png",
-          "https://i.ibb.co/C9gQt1h/theboyz-jacob-slide1.png",
         ],
         birth: ["1997년 5월 30일", "캐나다 온타리오 토론토"],
         nationality: "캐나다",
@@ -307,8 +307,8 @@ export const memberSpecifics: IMemberSpecificGroups = {
         englishName: "Sung Hanbin",
         imgs: [
           "https://i.ibb.co/Tr6cTkw/zb1-shb-slide1.png",
-          "https://i.ibb.co/zSPcskm/zb1-shb-slide3.png",
           "https://i.ibb.co/ZWj29St/zb1-shb-slide2.png",
+          "https://i.ibb.co/zSPcskm/zb1-shb-slide3.png",
         ],
         birth: ["2001년 6월 13일", "충청남도 천안시 쌍용동"],
         nationality: "대한민국",

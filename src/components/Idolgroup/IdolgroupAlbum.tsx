@@ -24,7 +24,7 @@ const IdolgroupAlbum = ({ album }: { album: IAlbum }) => {
 
           {series}
         </p>
-        <p className="text-[16px] lg:text-[30px] font-bold text-center leading-[18px] lg:leading-[30px]">
+        <p className="text-[16px] lg:text-[30px] font-bold text-center leading-[18px] lg:leading-[40px]">
           [{title}]
           {etc && (
             <>

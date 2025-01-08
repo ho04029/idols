@@ -42,7 +42,7 @@ const Idolgroup = () => {
             <img
               src={group.logo}
               alt={`${group.name} logo`}
-              className="h-[47px] lg:h-[139px] mb-[18px] lg:mb-[60px]"
+              className="w-full h-[47px] lg:h-[100px] mb-[18px] lg:mb-[60px] object-contain"
             />
             <img
               src={group.mainPhoto}

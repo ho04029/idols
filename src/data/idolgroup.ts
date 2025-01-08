@@ -319,7 +319,7 @@ export const IdolGroups: IidolGroups = {
   },
   ZEROBASEONE: {
     name: "ZEROBASEONE",
-    logo: "https://i.ibb.co/BNFgCgJ/zb1-logo.png",
+    logo: "https://i.ibb.co/kGjqBm0/zb1-logo4x.png",
     mainPhoto: "https://i.ibb.co/4Y65WrT/zb1-main.png",
     slogan: "둘, 셋 D1, Be the ONE! 안녕하세요, ZEROBASEONE입니다!",
     members: [
@@ -466,7 +466,7 @@ export const IdolGroups: IidolGroups = {
   },
   RIIZE: {
     name: "RIIZE",
-    logo: "https://i.ibb.co/S364BVb/riize-logo.png",
+    logo: "https://i.ibb.co/z7zvxcG/riize-logo4x.png",
     mainPhoto: "https://i.ibb.co/Z6fZXph/riize-main.png",
     slogan: "We RIIZE!",
     members: [
