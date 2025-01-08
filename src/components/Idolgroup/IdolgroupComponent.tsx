@@ -44,7 +44,7 @@ IdolgroupComponent.Section = ({
 IdolgroupComponent.H3 = ({ children, className }: IProps) => {
   return (
     <h3
-      className={`text-4xl lg:text-5xl font-extrabold mb-[60px] lg:mb-[200px] ${className}`}
+      className={`text-4xl lg:text-[35px] font-extrabold mb-[60px] lg:mb-[200px] ${className}`}
     >
       {children}
     </h3>
@@ -117,7 +117,7 @@ IdolgroupComponent.Albums = ({
         className="w-full flex flex-col items-center mb-[40px] lg:mb-[208px]"
       >
         <div
-          className="max-w-fit text-[16px] lg:text-[41px] font-semibold mb-[40px] lg:mb-[208px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] lg:px-[25px] lg:py-[8px] rounded-[5px] lg:rounded-[30px]"
+          className="max-w-fit text-[16px] lg:text-[30px] font-semibold mb-[40px] lg:mb-[150px] pt-[3px] pr-[5px] pb-[2px] pl-[4px] lg:px-[16px] lg:py-[8px] rounded-[5px] lg:rounded-[30px]"
           style={{
             backgroundColor: albumConBgColor,
             color: albumContextColor,

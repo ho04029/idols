@@ -42,14 +42,14 @@ const Idolgroup = () => {
             <img
               src={group.logo}
               alt={`${group.name} logo`}
-              className="h-[47px] lg:h-[157px] mb-[18px] lg:mb-[60px]"
+              className="h-[47px] lg:h-[139px] mb-[18px] lg:mb-[60px]"
             />
             <img
               src={group.mainPhoto}
               alt={`${group.name} mainPhoto`}
               className="w-full max-w-[1043px] mb-2 lg:mb-[30px]"
             />
-            <p className="text-center text-[14px] lg:text-[30px] font-bold break-keep">
+            <p className="text-center text-[14px] lg:text-[25px] font-bold break-keep">
               {group.slogan}
             </p>
           </IdolgroupComponent.Section>
