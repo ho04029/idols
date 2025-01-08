@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Slider = ({ slides }: { slides: string[] }) => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
   const length = slides.length;
   let prevSlide = current === 0 ? length - 1 : current - 1;
   let nextSlide = current === length - 1 ? 0 : current + 1;
