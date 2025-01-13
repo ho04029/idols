@@ -7,7 +7,7 @@ const zb1Keyword = ["제로베이스원", "제베원", "zb1", "zerobaseone"];
 const riizeKeyword = ["라이즈", "riize"];
 const nctwishKeyword = [
   "엔시티 위시",
-  "엔시테위시",
+  "엔시티위시",
   "엔위시",
   "위시",
   "nct wish",
