@@ -2,6 +2,7 @@ import { useMenuStore } from "../store/store";
 import { AiOutlineClose } from "react-icons/ai";
 import SearchBox from "./SearchBox";
 
+//TODO: NoSearchResult.tsx, MenuBar.tsx겹치는 로직 리팩토링
 const MenuBar = () => {
   const closeMenuHandler = useMenuStore((state) => state.closeMenuHandler);
   return (

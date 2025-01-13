@@ -36,7 +36,7 @@ const SearchBox = ({ className }: { className?: string }) => {
     if (matchingRoute) {
       navigate(matchingRoute);
     } else {
-      console.log("No matching group found");
+      navigate(`/search?keyword=${searchKeyword}`);
     }
   };
 

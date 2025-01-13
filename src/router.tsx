@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Idolgroup from "./pages/Idolgroup";
 import IdolMemberSpecific from "./pages/IdolMemberSpecific";
 import SalesGraph from "./pages/SalesGraph";
+import NoSearchResult from "./pages/NoSearchResult";
 
 const routerData: RouteObject[] = [
   {
@@ -25,6 +26,10 @@ const routerData: RouteObject[] = [
       {
         path: "/graph/:groupName",
         element: <SalesGraph />,
+      },
+      {
+        path: "/search",
+        element: <NoSearchResult />,
       },
     ],
   },
