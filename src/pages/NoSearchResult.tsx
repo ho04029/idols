@@ -20,11 +20,11 @@ const NoSearchResult = () => {
         <div className="text-[33px] lg:text-[69px]">
           <IoMdSearch />
         </div>
-        <div className="flex flex-col items-center gap-[10px] lg:gap-[25px]">
-          <p className="text-[16px] lg:text-[25px] font-semibold leading-[35px]">
+        <div className="flex flex-col items-center gap-[10px]">
+          <p className="text-[16px] lg:text-[20px] font-semibold leading-[35px]">
             '{keyword}'에 관한 검색결과가 없습니다.
           </p>
-          <p className="text-center w-[260px] lg:w-full text-[14px] lg:text-[25px] font-medium leading-[20px] lg:leading-[35px] break-keep">
+          <p className="text-center w-[260px] lg:w-full text-[14px] lg:text-[20px] font-medium leading-[20px] lg:leading-[35px] break-keep">
             모든 단어의 철자가 정확한지 확인하거나 다른 검색어로 검색해 보세요.
           </p>
         </div>
