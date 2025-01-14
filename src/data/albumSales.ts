@@ -141,7 +141,7 @@ export const albumSales: IAlbumSales = {
     Steady: {
       img: "https://i.ibb.co/xfQc1WH/nctwish-steady.png",
       albumSalesData: [213400, 321700, 337200, 618800, 621400, 625000, 792300],
-      mainColor: "#AA0423",
+      mainColor: "#E49EA3",
     },
   },
 };
