@@ -5,7 +5,7 @@ export const IdolGroups: IidolGroups = {
     name: "THEBOYZ",
     logo: "https://i.ibb.co/2dYdwQD/THEBOYZ-logo.png",
     slogan: "Best We THE BOYZ! 안녕하세요, 더보이즈입니다!",
-    mainPhoto: "https://i.ibb.co/6vfqs9w/theboyz-main.png",
+    mainPhoto: "https://i.ibb.co/7yFCXM3/theboyz-main.png",
     members: [
       {
         name: "상연",
@@ -320,7 +320,7 @@ export const IdolGroups: IidolGroups = {
   ZEROBASEONE: {
     name: "ZEROBASEONE",
     logo: "https://i.ibb.co/kGjqBm0/zb1-logo4x.png",
-    mainPhoto: "https://i.ibb.co/4Y65WrT/zb1-main.png",
+    mainPhoto: "https://i.ibb.co/Cb8FnSt/zb1-main.png",
     slogan: "둘, 셋 D1, Be the ONE! 안녕하세요, ZEROBASEONE입니다!",
     members: [
       {
@@ -467,7 +467,7 @@ export const IdolGroups: IidolGroups = {
   RIIZE: {
     name: "RIIZE",
     logo: "https://i.ibb.co/z7zvxcG/riize-logo4x.png",
-    mainPhoto: "https://i.ibb.co/Z6fZXph/riize-main.png",
+    mainPhoto: "https://i.ibb.co/F0fg2CK/riize-main.png",
     slogan: "We RIIZE!",
     members: [
       {
@@ -604,7 +604,7 @@ export const IdolGroups: IidolGroups = {
   NCTWISH: {
     name: "NCTWISH",
     logo: "https://i.ibb.co/GHFSF8j/nctwish-logo.png",
-    mainPhoto: "https://i.ibb.co/swDt99p/nctwish-main.png",
+    mainPhoto: "https://i.ibb.co/7tq9hZS/nctwish-main.png",
     slogan: "TO THE WORLD, 여기는 NCT! 안녕하세요, NCT WISH입니다!",
     members: [
       {
