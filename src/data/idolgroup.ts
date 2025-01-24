@@ -417,6 +417,13 @@ export const IdolGroups: IidolGroups = {
           img: "https://i.ibb.co/MkHVWpp/zb1-sweat.png",
           youtubeLink: "https://www.youtube.com/watch?v=6J2tyiQ_V6s",
         },
+        {
+          date: "2025. 01. 20",
+          series: "Pre-Release Single",
+          title: "Doctor! Doctor!",
+          img: "https://i.ibb.co/dGVM92v/zb1-doctordoctor.webp",
+          youtubeLink: "https://www.youtube.com/watch?v=9BXF8gSpEwY",
+        },
       ],
     },
     japanAlbums: {
@@ -569,6 +576,13 @@ export const IdolGroups: IidolGroups = {
           img: "https://i.ibb.co/G3w15Fm/riize-impossible.png",
           youtubeLink: "https://www.youtube.com/watch?v=Ey53EQhkLY8",
         },
+        {
+          date: "2025. 01. 08",
+          series: "Digital Single",
+          title: "Hug",
+          img: "https://i.ibb.co/RPVQRc7/riize-hug.webp",
+          youtubeLink: "https://www.youtube.com/watch?v=4zve1lFvVQA",
+        },
       ],
     },
     japanAlbums: {
@@ -693,6 +707,15 @@ export const IdolGroups: IidolGroups = {
           title: "Dunk Shot",
           img: "https://i.ibb.co/xfMxgZh/nctwish-dunk-shot.png",
           youtubeLink: "https://www.youtube.com/watch?v=4vgac97VlCE",
+        },
+      ],
+      "선공개 싱글": [
+        {
+          date: "2025. 01. 22",
+          series: "Pre-Release Single",
+          title: "Miracle",
+          img: "https://i.ibb.co/H756bgQ/nctwish-miracle.webp",
+          youtubeLink: "https://www.youtube.com/watch?v=R319nIK_P4s",
         },
       ],
     },
