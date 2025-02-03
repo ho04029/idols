@@ -427,6 +427,15 @@ export const IdolGroups: IidolGroups = {
       ],
     },
     japanAlbums: {
+      미니: [
+        {
+          date: "2025. 01. 29",
+          series: "Japan 1st EP",
+          title: "PREZENT",
+          img: "https://i.ibb.co/C5STvds5/zb1-prezent.webp",
+          youtubeLink: "https://www.youtube.com/watch?v=whrNetEPe_M",
+        },
+      ],
       싱글: [
         {
           date: "2024. 03. 20",
