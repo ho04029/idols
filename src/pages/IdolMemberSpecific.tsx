@@ -3,7 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 
 import { ageCalculator } from "../utils/ageCalculator";
 import { memberSpecifics } from "../data/memberSpecific";
-import Slider from "../components/Slider";
+import Slider from "../components/IdolMemberSpecific/Slider";
 import HamburgerMenu from "../components/HamburgerMenu";
 import BackIcon from "../components/BackIcon";
 
