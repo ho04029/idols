@@ -642,7 +642,7 @@ export const IdolGroups: IidolGroups = {
     name: "NCTWISH",
     logo: "https://i.ibb.co/GHFSF8j/nctwish-logo.png",
     mainPhoto: "https://i.ibb.co/7tq9hZS/nctwish-main.png",
-    slogan: "TO THE WORLD, 여기는 NCT! 안녕하세요, NCT WISH입니다!",
+    slogan: `TO THE WORLD, 여기는 NCT!\n 안녕하세요, NCT WISH입니다!`,
     members: [
       {
         name: "시온",

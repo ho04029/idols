@@ -49,7 +49,7 @@ const Idolgroup = () => {
               alt={`${group.name} mainPhoto`}
               className="w-full max-w-[1043px] mb-2 lg:mb-[30px]"
             />
-            <p className="text-center text-[14px] lg:text-[25px] font-bold break-keep">
+            <p className="text-center text-[14px] lg:text-[25px] font-bold break-keep whitespace-pre-line lg:whitespace-normal">
               {group.slogan}
             </p>
           </IdolgroupComponent.Section>
