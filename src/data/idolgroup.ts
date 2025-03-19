@@ -107,6 +107,13 @@ export const IdolGroups: IidolGroups = {
           img: "https://i.ibb.co/8b6pxsL/theboyz-phantasy-pt3.png",
           youtubeLink: "https://www.youtube.com/watch?v=CL3F7Cgkaxw",
         },
+        {
+          date: "2025. 03. 17",
+          series: "3rd Album",
+          title: "Unexpected",
+          img: "https://i.ibb.co/Y7dXQ6TC/theboyz-unexpected.png",
+          youtubeLink: "https://www.youtube.com/watch?v=5sulSfWKV4Q",
+        },
       ],
       미니: [
         {
@@ -407,6 +414,13 @@ export const IdolGroups: IidolGroups = {
           title: "CINEMA PARADISE",
           img: "https://i.ibb.co/LZDv1YD/zb1-cinema-paradise.png",
           youtubeLink: "https://www.youtube.com/watch?v=V5ACuj_jOnc",
+        },
+        {
+          date: "2025. 02. 24",
+          series: "The 5th Mini Album",
+          title: "BLUE PARADISE",
+          img: "https://i.ibb.co/8DmxqzSH/zb1-BLUE-PARADISE.png",
+          youtubeLink: "https://www.youtube.com/watch?v=2hwiRN8t8Ok",
         },
       ],
       "선공개 싱글": [

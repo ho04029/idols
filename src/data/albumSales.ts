@@ -107,6 +107,13 @@ export const albumSales: IAlbumSales = {
       ],
       mainColor: "#D0EBED",
     },
+    "BLUE PARADISE": {
+      img: "https://i.ibb.co/8DmxqzSH/zb1-BLUE-PARADISE.png",
+      albumSalesData: [
+        1013900, 1022300, 1080500, 1136900, 1226900, 1229200, 1252300,
+      ],
+      mainColor: "#D9EBFC",
+    },
   },
   RIIZE: {
     "Get A Guitar": {
